@@ -1,0 +1,29 @@
+
+{
+  "title": "Lorem Ipsum",
+  "description":"Lorem ipsum dolor sit amet. Sed obcaecati voluptatem vel culpa sapiente et exercitationem iste. Eum fugiat quidem est doloremque galisum aut adipisci neque id deleniti quasi quo explicabo nemo?\n        Et nisi dolores ut incidunt neque ea quae cumque. Et dolorem accusantium ex facilis repellat et nobis corrupti qui voluptate iure sit repellendus quia quo atque repellat eum enim odit.\n        Sit obcaecati corporis aut delectus temporibus cum consequuntur libero qui nisi natus! Sit internos aspernatur est omnis nemo nam quae similique qui aliquid ipsam. Est laboriosam blanditiis qui illo quidem qui tempora maiores eum eveniet numquam et sunt molestias. Ut nihil facere ut dolores soluta et laudantium accusantium et saepe mollitia eos quisquam ducimus sed molestiae voluptatem sit tenetur totam?",
+  "navigation": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "About",
+      "url": "/about"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact"
+    },
+    {
+      "label": "Menu",
+      "url": "/menu"
+    }
+  ]
+
+}
+
+
+
+
+

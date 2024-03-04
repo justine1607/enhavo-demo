@@ -1,0 +1,102 @@
+{
+  "navigation": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "About",
+      "url": "/about"
+    },
+    {
+      "label": "Projects",
+      "url": "/contact"
+    },
+    {
+      "label": "Skills",
+      "url": "/contact"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact"
+    }
+  ],
+    "search": {
+      "type": "text",
+      "placeholder": "search"
+    },
+
+  "content": [
+    {
+      "image": "/build/theme/images/pic1.png",
+      "header": "Welcome! Please Enjoy Exploring",
+      "template": "/theme/block/hero.html.twig"
+    },
+
+    {
+      "image": "/build/theme/images/girl.png",
+      "about_me": "About me",
+      "paragraph": "Lorem ipsum dolor sit amet. Ex maiores ipsa et aliquam iure quo voluptate omnis. Est voluptatem laudantium qui voluptatem galisum qui reprehenderit saepe? Et enim sunt id libero natus et incidunt reiciendis. Hic perspiciatis provident et repellendus officiis ea numquam magni.\nEst expedita consectetur et tempore necessitatibus qui magni aperiam 33 dolor galisum. Ut velit omnis id sapiente tempore a fugit delectus.\nUt omnis quibusdam hic eligendi autem aut illo magni sed accusantium quaerat vel quaerat voluptas? Qui voluptas odit vel placeat voluptas in beatae earum qui labore exercitationem vel deserunt tempora? At sunt quidem non reiciendis accusantium aut iste voluptas et officiis perferendis ad tempora voluptas et inventore rerum. Et officiis provident in soluta iusto vel tenetur excepturi sed mollitia architecto ex animi nobis ab quas fugiat? ",
+      "template": "/theme/block/about.html.twig"
+    },
+
+    {
+      "images":[
+        "/build/theme/images/proj1.png",
+        "/build/theme/images/proj1.png"],
+      "project": "My Project",
+      "template": "/theme/block/project.html.twig"
+    },
+
+    {
+      "images":[
+        "/build/theme/images/Ellipse 2.png",
+        "/build/theme/images/Ellipse 3.png",
+        "/build/theme/images/Ellipse 4.png",
+        "/build/theme/images/Ellipse 5.png"
+      ],
+      "skills": "Skills",
+      "template": "/theme/block/skills.html.twig"
+    },
+    {
+      "svg": "<?xml version=\"1.0\" ?><svg style=\"enable-background:new 0 0 24 24;\" version=\"1.1\" viewBox=\"0 0 24 24\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g id=\"info\"/><g id=\"icons\"><g id=\"user\"><ellipse cx=\"12\" cy=\"8\" rx=\"5\" ry=\"6\"/><path d=\"M21.8,19.1c-0.9-1.8-2.6-3.3-4.8-4.2c-0.6-0.2-1.3-0.2-1.8,0.1c-1,0.6-2,0.9-3.2,0.9s-2.2-0.3-3.2-0.9    C8.3,14.8,7.6,14.7,7,15c-2.2,0.9-3.9,2.4-4.8,4.2C1.5,20.5,2.6,22,4.1,22h15.8C21.4,22,22.5,20.5,21.8,19.1z\"/></g></g></svg>",
+      "contact": "Contact",
+      "phone": "09305451066",
+      "email": "jm@gmail.com",
+      "address": "123,Hero St.",
+      "template": "/theme/block/form.html.twig",
+      "button":"submit",
+      "form": {
+        "name": {
+          "type": "text",
+          "label": "Name",
+          "placeholder": "Enter your name"
+        },
+        "email": {
+          "type": "email",
+          "label": "Email",
+          "placeholder": "Enter your email address"
+        },
+        "subject": {
+          "type": "text",
+          "label": "Subject",
+          "placeholder": "Enter the subject"
+        },
+        "message": {
+          "type": "text-area",
+          "label": "Message",
+          "placeholder": "Enter your message"
+        }
+      }
+    },
+    {
+      "contact": "Contact",
+      "phone": "09305451066",
+      "email": "jm@gmail.com",
+      "address": "123,Hero St.",
+      "text": "stay connected",
+      "button": "sign up",
+      "template": "/theme/block/footer.html.twig"
+    }
+  ]
+}

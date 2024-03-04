@@ -1,0 +1,15 @@
+<div class="form">
+    <div class="text-header">{{ item.contact }}</div>
+
+    <form action="#" method="post">
+        {% for fieldName, fieldData in item.form %}
+            <label for="{{ fieldName }}">{{ fieldData.label }}</label>
+            {% if fieldData.type == 'text-area' %}
+                <textarea name="{{ fieldName }}" id="{{ fieldName }}" placeholder="{{ fieldData.placeholder }}"></textarea>
+            {% else %}
+                <input type="{{ fieldData.type }}" name="{{ fieldName }}" id="{{ fieldName }}" placeholder="{{ fieldData.placeholder }}">
+            {% endif %}
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</div>

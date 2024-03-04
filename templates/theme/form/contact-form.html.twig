@@ -1,0 +1,25 @@
+
+<style>
+    .contact_style{
+        display: flex;justify-content: center;align-items: center;flex-direction: column;
+        max-width: 100vh;
+        margin: 5% 0 0 0;
+    }
+    .contacts{
+        display: flex;justify-content: flex-end;align-items: center;flex-direction: column;
+        margin-left: 50%;padding: 10px;
+        font-size: 40px;
+        line-height: 5;
+    }
+</style>
+
+<div class="contact_style">
+    <div class="text-header"> {{ item.contact }}</div>
+        <div class="contacts">
+            <div>{{ item.phone }}</div>
+            <div>{{ item.email }}</div>
+            <div>{{ item.address }}</div>
+        </div>
+</div>
+
+

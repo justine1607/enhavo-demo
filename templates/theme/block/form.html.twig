@@ -1,0 +1,37 @@
+
+<div class="contact_style" data-controller="form">
+    <div class="text-header"> {{ item.contact }}</div>
+        <form data-target="form.form">
+            <div class="form-row">
+                <div>
+                    <label for="name">{{ item.form.name.label }}</label>
+                    <input type="{{ item.form.name.type }}" name="name" id="name">
+                </div>
+                <div>
+                    <label for="email">{{ item.form.email.label }}</label>
+                    <input type="{{ item.form.email.type }}" name="email" id="email">
+                </div>
+            </div>
+            <div class="form_input">
+                <label for="subject">{{ item.form.subject.label }}</label>
+                <div class="subject">
+                    <input type="{{ item.form.subject.type }}" name="subject" id="subject">
+                </div>
+                    <label for="message">{{ item.form.message.label }}</label>
+                <div class="textarea">
+                    <textarea name="message" id="message"></textarea>
+                </div>
+
+                <div class="button">{{ item.button}}</div>
+            </div>
+        </form>
+{#    <div class="svg">{{ item.svg|raw }}</div>#}
+    <div class="contacts">
+
+        <div>{{ item.phone }}</div>
+        <div>{{ item.email }}</div>
+        <div>{{ item.address }}</div>
+
+    </div>
+    <hr>
+</div>

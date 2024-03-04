@@ -1,5 +1,33 @@
-{% extends template('theme/base.html.twig') %}
+{#{% extends template('theme/base.html.twig') %}#}
 
-{% block main %}
-    {{ block_render(resource.content, resource) }}
-{% endblock %}
+{#{% block main %}#}
+{#    {{ block_render(resource.content, resource) }}#}
+{#{% endblock %}#}
+
+<html>
+<body>
+{{ encore_entry_link_tags('base', null, 'theme') }}
+<div class="nav">
+{#    <ul>#}
+{#        {{navigation}}#}
+
+{#    </ul>#}
+</div>
+<div class="text-zone">
+    <h1>
+        {{ title }}
+    </h1>
+    <p>
+        {{ description }}
+    </p>
+
+</div>
+<div data-controller="sample">
+    <button data-sample-target="sample.button" data-action="click->sample#greet">Do it!</button>
+</div>
+
+
+{{ encore_entry_link_tags('base', null, 'theme') }}
+</body>
+</html>
+

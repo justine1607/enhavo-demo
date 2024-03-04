@@ -1,0 +1,41 @@
+body {
+  background-color: green; color:white;
+  //background-image: url("assets/theme/assets/images/pic.jpg");
+  }
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+button{
+//  background-color: white;
+}
+a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+
+}
+.text-zone{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+p{
+  width: 50%;
+  max-width: 100vh;
+}
+h1,p,button{
+  color: white;
+  padding: 10px;
+}
+.type{
+  background-color: gray;
+  padding: 10px;margin: 0 0 0 26%;
+  border-radius: 8px;
+
+;
+}

@@ -1,0 +1,22 @@
+<html>
+<head>
+    {{ encore_entry_link_tags('base', null, 'theme') }}
+
+</head>
+<body>
+test
+
+
+<div data-controller="sample">
+    <button data-sample-target="button" data-action="click->sample#greet">Do it!</button>
+</div>
+
+<div data-controller="sample">
+    <button data-sample-target="sample.button" data-action="click->sample#greet">Do it!</button>
+</div>
+
+
+
+{{ encore_entry_script_tags('base', null, 'theme') }}
+</body>
+</html>
