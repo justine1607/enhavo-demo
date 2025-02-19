@@ -1,20 +1,28 @@
 .block-quote {
-  background: $textColor3;
-  height: 298px;display: flex;justify-content: center;align-items: center;
-  .flex {
-    display: flex;justify-content: center;align-items: center;
-    .text-container {
-      flex: 1; display: flex;flex-direction: column;justify-content: center;align-items: center;gap: 30px;
-      .headline{
-        color: $textColor1;text-transform: inherit;font-style: italic;text-align: center;
-        max-width: 76%}
-      .caption {
-        color: #FFF;text-transform: capitalize;text-align: center;}
-    }
+  position: relative;
+    background: $textColor3;
+    margin-top: 60px;
+    height: 298px;display: flex;justify-content: center;align-items: center;
+  &::before, &::after {
+    content: "";
+    background: url("/assets/theme/assets/images/qoutes.svg") no-repeat center;
+    background-size: contain;
+    width: 86px;
+    height: 70px;
+    position: absolute;
   }
-  .svg-right {
-    padding-top: 14px;
-    img{max-width: 86px;display: block;margin-left: auto;}
+  &::before {left: 12%;top: -10px;}
+  &::after {right: 12%;bottom: -10px;}
+  .container {max-width: 993px;margin-inline: auto; }
+  .headline{
+    color: $textColor1;
+    text-transform: inherit;
+    font-style: italic;
+   }
+  .caption {
+    padding: 15px 0 0 0 ;
+    color: #FFF;
+    text-transform: capitalize;text-align: center;
   }
-  img{max-width: 86px;display: block;}
+
 }

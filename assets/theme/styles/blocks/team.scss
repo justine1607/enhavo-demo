@@ -1,23 +1,19 @@
 .block-team {
   .grid {
-    display: grid;grid-template-columns: repeat(3, 1fr);gap: 51px;
+    padding-top: 60px;
+    display: grid;grid-template-columns: repeat(6, 1fr);gap: 51px;
     .item {
+      grid-column: span 2;
       text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;gap:20px;
       &:nth-of-type(4){
-        align-items: end;
+        margin-top: 30px;
+        grid-column: 2/span 2;
       }
       &:nth-of-type(5){
-        align-items: end;
-      }
-      .media-container{
-        position: relative;
-        padding-bottom: 44.48%;
-        max-width: 210px;width: 100%;
-        img{display: block;@include imgCover;}
-      }
-      .text-container{
-        .copy{padding-top: 15px;}
+        margin-top: 30px;
+       grid-column: 4/span 2;
       }
     }
   }
+  img{display: block;width: 100%;}
 }

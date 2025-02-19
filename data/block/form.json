@@ -17,7 +17,7 @@
                 {
                     "type": "select",
                     "label": "ANREDE",
-                    "is_required": false,
+                    "is_required": true,
                     "options": [
                         {"value": "herr", "label": "Herr"},
                         {"value": "frau", "label": "Frau"},
@@ -40,7 +40,7 @@
                     "type": "textarea",
                     "label": "NACHRICHT",
                     "placeholder": "HALLO, ICH HABE EINE FRAGE.",
-                    "is_required": false
+                    "is_required": true
                 }
             ],
             "type":"checkbox",

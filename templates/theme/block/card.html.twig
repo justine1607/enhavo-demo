@@ -1,11 +1,8 @@
-<div class="block-card">
+<div class="block-card card-{{ block.layout }}">
     <div class="theme-container">
-        <div class="{{ block.layout }}-flex">
+        <div class="flex">
             <div class="media-container">
-                <div class="img-wrapper">
-                    <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="headerbild-img">
-                    <div class="gradient"></div>
-                </div>
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="headerbild-img">
             </div>
             <div class="text-container">
                 <div class="theme-overline">{{ block.overline|html_sanitize }}</div>

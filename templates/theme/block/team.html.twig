@@ -7,11 +7,11 @@
                         <img src="{{ media_url(block.teamMember.picture) }}" alt="{{ media_parameter(block.teamMember.picture, 'alt') }}">
                     </div>
                     <div class="text-container">
-                        <div class="theme-overline overline">{{ block.position }}</div>
-                        <span class="theme-headline headline">{{ block.teamMember.firstName }} {{ block.teamMember.lastName }}</span>
+                        <div class="theme-overline overline">{{ block.position|html_sanitize }}</div>
+                        <span class="theme-headline headline">{{ block.teamMember.firstName|html_sanitize }} {{ block.teamMember.lastName }}</span>
                         <div class="copy">
-                            <div>{{ block.teamMember.phone }}</div>
-                            <div>{{ block.teamMember.email }}</div>
+                            <div>{{ block.teamMember.phone|html_sanitize }}</div>
+                            <div>{{ block.teamMember.email|html_sanitize }}</div>
                         </div>
                     </div>
                 </div>
