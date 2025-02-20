@@ -1,17 +1,29 @@
 .block-form {
-    padding-top: 60px;
+  margin-top:60px;
   .form-grid {display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;}
   .form {grid-column: 2 / span 4;
     .btn-container{
       margin-top: 50px;
       border-radius: 35px;border: 2px solid $textColor2;
     }
+    .checkbox-group{display: flex;align-items: center;gap: 10px;}
     .checkbox-label{font-size: 10px;}
-    .cta {cursor: pointer;padding:15px 30px;width: 100%;height: auto;display: flex;justify-content: center;align-items: center;}
+    .cta {font-weight: 700;cursor: pointer;padding:15px 30px;width: 100%;height: auto;display: flex;justify-content: center;align-items: center;}
     .error-border {border: 1px solid red !important;}
-    input[type="text"], select,textarea{margin: 9px 0 20px 0;}
-    input[type="email"]{margin: 9px 0 0 0;}
-    input[type="text"], input[type="email"], textarea, select {width: 100%;background: #FFFFFF;border: 1px solid #171717;opacity: 1;padding: 1rem;}
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea{margin: 9px 0 20px 0;}
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid #171717;
+      opacity: 1;
+      padding: 10px 20px;
+    }
     input[type="checkbox"] {
       appearance: none;
       width: 12px;
@@ -25,10 +37,10 @@
       background-color: black;
     }
     input[type="checkbox"]::before {
-      content: "✔";
-      color: white;
-      font-size: 14px;
-      font-weight: bold;
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M21.652 3.211c-.293-.295-.77-.295-1.061 0L9.41 14.34c-.293.297-.771.297-1.062 0L3.449 9.351c-.145-.148-.335-.221-.526-.222-.193-.001-.389.072-.536.222l-2.165 1.946c-.145.148-.223.333-.223.526s.078.397.223.544l4.94 5.184c.292.296.771.776 1.062 1.07l2.124 2.141c.292.293.769.293 1.062 0l14.366-14.34c.293-.294.293-.777 0-1.071l-1.061-1.061z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -41,16 +53,19 @@
       border: 1px solid red;
     }
     .label {font-weight: 700;letter-spacing: 0.45px;line-height: 1.055em;}
-    label[for='checkbox']{line-height: 2.6em;letter-spacing: 0.1px;font-size: 1rem;text-transform: capitalize;margin-left: 1%;}
     .required-message {
       display: none;
       color: red;
       font-size: 10px;
     }
     .show-error {display: block;}
-    #email::placeholder, #text::placeholder, textarea::placeholder, select{color: $textColor3;font-weight: 700;letter-spacing: 0.45px;line-height: 1.055em;text-transform: uppercase}
-    #email::placeholder {color: #CBCBCB;}
-    select {color: #CBCBCB;}
+    #nachname::placeholder,
+    #vorname::placeholder,
+    text::placeholder,
+    textarea::placeholder,
+    select{color: $textColor3;font-weight: 700;letter-spacing: 0.45px;line-height: 1.055em;text-transform: uppercase;}
+    select,
+    #vorname::placeholder{color: #CBCBCB;}
   }
     .text-container {grid-column: 2 / span 4;}
     .theme-headline{

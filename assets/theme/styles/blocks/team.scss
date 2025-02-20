@@ -1,19 +1,16 @@
 .block-team {
-  .grid {
-    padding-top: 60px;
-    display: grid;grid-template-columns: repeat(6, 1fr);gap: 51px;
-    .item {
-      grid-column: span 2;
-      text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;gap:20px;
-      &:nth-of-type(4){
-        margin-top: 30px;
-        grid-column: 2/span 2;
-      }
-      &:nth-of-type(5){
-        margin-top: 30px;
-       grid-column: 4/span 2;
-      }
+  margin-top:60px;
+  .grid {display: grid;grid-template-columns: repeat(6, 1fr);gap: 51px;}
+  .item {
+    grid-column: span 2;
+    text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;gap:20px;
+    &:nth-of-type(4){
+      margin-top: 30px;
+      grid-column: 2/span 2;
+    }
+    &:nth-of-type(5){
+      margin-top: 30px;
+     grid-column: 4/span 2;
     }
   }
-  img{display: block;width: 100%;}
 }

@@ -2,7 +2,7 @@
   margin-top: 60px;
   .copy {margin-top: 25px;text-align: center;}
   .ex-toggle {
-    position:absolute;right:0;left: auto;top: 0;bottom: auto;
+    position:absolute;right:10px;left: auto;top: 0;bottom: auto;
     width:35px;height:35px;
     cursor:pointer;
     .lines {
@@ -27,13 +27,11 @@
     text-align: center;
     &.boldHeadline{font-size: 5rem;line-height: 1.28em;}
   }
-
   .text-container {
     max-width: 993px;
     padding-inline: 30px;
     display: flex; flex-direction: column;align-items: center;
   }
-
   .wrapper {
     background: rgba(54, 247, 234, 1);
     position: relative;

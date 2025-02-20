@@ -1,4 +1,5 @@
 .block-advance-text {
+  margin-top:60px;
   &.advance-headline-breaker{
     .theme-headline{
       &.boldHeadline{font-size: 5rem;line-height: 1.28em;}
@@ -15,5 +16,5 @@
     .text-container{display: flex;gap: 51px;}
     .button-container{margin-left: auto;}
   }
-  .flex{padding-top: 60px;max-width: 993px;margin-inline: auto;}
+  .flex{max-width: 993px;margin-inline: auto;}
 }

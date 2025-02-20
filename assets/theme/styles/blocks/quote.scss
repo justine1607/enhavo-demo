@@ -1,8 +1,19 @@
 .block-quote {
-  position: relative;
+    position: relative;
     background: $textColor3;
     margin-top: 60px;
     height: 298px;display: flex;justify-content: center;align-items: center;
+  .container {max-width: 993px;margin-inline: auto; }
+  .caption {
+    padding: 15px 0 0 0 ;
+    color: #FFF;
+    text-transform: capitalize;text-align: center;
+  }
+  .headline{
+    color: $textColor1;
+    text-transform: inherit;
+    font-style: italic;
+  }
   &::before, &::after {
     content: "";
     background: url("/assets/theme/assets/images/qoutes.svg") no-repeat center;
@@ -13,16 +24,4 @@
   }
   &::before {left: 12%;top: -10px;}
   &::after {right: 12%;bottom: -10px;}
-  .container {max-width: 993px;margin-inline: auto; }
-  .headline{
-    color: $textColor1;
-    text-transform: inherit;
-    font-style: italic;
-   }
-  .caption {
-    padding: 15px 0 0 0 ;
-    color: #FFF;
-    text-transform: capitalize;text-align: center;
-  }
-
 }

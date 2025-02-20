@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-    {% block meta %}{% endblock %}
-
     {% block stylesheets %}
         {{ encore_entry_link_tags('base', null, 'theme') }}
     {% endblock %}
@@ -44,22 +42,22 @@
         </div>
     </main>
     {% block footer %}
-    <footer>
-        <div class="theme-container">
-            <a href="#" class="contact-row">
-                <div class="left">
-                    <div class="label theme-headline">logo</div>
-                    <div>copyright</div>
-                </div>
-                <div class="right">
-                    <div class="label">DATENSCHUTZ</div>
-                    <div class="middle-space">IMPRESSUM</div>
-                    <div>AGB</div>
-                </div>
-
-            </a>
-        {% include 'theme/navigation/footer.html.twig' %}
-    </footer>
+        <footer>
+            <div class="theme-container">
+                <a href="#" class="contact-row">
+                    <div class="left">
+                        <div class="label theme-headline">logo</div>
+                        <div>copyright</div>
+                    </div>
+                    <div class="right">
+                        <div class="label">DATENSCHUTZ</div>
+                        <div class="middle-space">IMPRESSUM</div>
+                        <div>AGB</div>
+                    </div>
+                </a>
+            </div>
+            {% include 'theme/navigation/footer.html.twig' %}
+        </footer>
     {% endblock %}
 {% endblock %}
 </body>

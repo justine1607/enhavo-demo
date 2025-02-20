@@ -1,4 +1,5 @@
 .block-content {
+  margin-top:60px;
   &.content-flex {
     .flex{display: flex;gap: 50px;}
     .texts-container {padding-top: 20px;}
@@ -16,6 +17,6 @@
       display: flex;gap: 50px;
     }
   }
-  .flex{padding-top: 60px;}
+
   img {display: block;width: 100%;}
 }

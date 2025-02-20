@@ -8,16 +8,33 @@ page:
                 - routes.json
                 - page/homepage.json
             template: 'theme/resource/page/show.html.twig'
+
             variants:
-                block=navigation:
+                page=homepage:
                     recursive: true
                     depth: 3
                     data:
                         resource:
                             content:
                                 children:
-                                    - "expr:load('navigation.json')"
-
+                                    - "expr:load('block/card-media-text-gradient.json')"
+                                    - "expr:load('block/content-flex-cards.json')"
+                                    - "expr:load('block/quote.json')"
+                                    - "expr:load('block/form.json')"
+                                    - "expr:load('block/gallery.json')"
+                                    - "expr:load('block/quote.json')"
+                                    - "expr:load('block/content-flex-cards.json')"
+                                    - "expr:load('block/team.json')"
+                blog=page-blog:
+                    recursive: true
+                    depth: 3
+                    data:
+                        resource:
+                            content:
+                                children:
+                                    - "expr:load('block/card-media-text-gradient.json')"
+                                    - "expr:load('block/advanced_text-big.json')"
+                                    - "expr:load('block/content-flex-cards.json')"
                 block=card:
                     recursive: true
                     depth: 3
