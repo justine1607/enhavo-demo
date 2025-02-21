@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-controller="sub-menu" data-sub-menu-main-menu-open-value="false" lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -22,15 +22,23 @@
 <body>
 {% block body %}
     {% block header %}
-        <header data-controller="sub-menu" data-sub-menu-target="header">
-            <div class="nav">
-                <div class="theme-container">
-                    <div class="navbar">
-                        <div class="header-img">
-                            <a href="#" class="logo-paw-link"><img src="{{ asset('build/theme/images/pfote.svg')}}" alt="nav_img" class="paw-logo" /></a>
-                            <a href="#" class="logo-link"><img src="{{ asset('build/theme/images/logo.svg') }}" alt="nav_img" class="text-logo" /></a>
+        <header data-sub-menu-target="header">
+            <div class="theme-container">
+                <div class="navbar">
+                    <div class="header-img">
+                        <a href="#" class="logo-paw-link"><img src="{{ asset('build/theme/images/pfote.svg')}}" alt="nav_img" class="paw-logo" /></a>
+                        <a href="#" class="logo-link"><img src="{{ asset('build/theme/images/logo.svg') }}" alt="nav_img" class="text-logo" /></a>
+                    </div>
+                    {% include 'theme/navigation/main.html.twig' %}
+                    <div class="header-info">
+                        <span class="number">+49 (0) 89 1234 5678 90</span>
+                    </div>
+                    <div class="hamburger">
+                        <div class="menu-toggle" data-action="click->sub-menu#button">
+                            <div class="lines">
+                                <div class="line"></div>
+                            </div>
                         </div>
-                        {% include 'theme/navigation/main.html.twig' %}
                     </div>
                 </div>
             </div>
@@ -44,17 +52,17 @@
     {% block footer %}
         <footer>
             <div class="theme-container">
-                <a href="#" class="contact-row">
+                <div class="contact-row">
                     <div class="left">
-                        <div class="label theme-headline">logo</div>
-                        <div>copyright</div>
+                        <div class="label logo">logo</div>
+                        <div class=" label" >copyright</div>
                     </div>
                     <div class="right">
-                        <div class="label">DATENSCHUTZ</div>
-                        <div class="middle-space">IMPRESSUM</div>
-                        <div>AGB</div>
+                        <a href="#" class="label">DATENSCHUTZ</a>
+                        <a href="#" class=" label ">IMPRESSUM</a>
+                        <a href="#" class=" label">AGB</a>
                     </div>
-                </a>
+                </div>
             </div>
             {% include 'theme/navigation/footer.html.twig' %}
         </footer>

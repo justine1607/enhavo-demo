@@ -14,14 +14,21 @@
     text-transform: inherit;
     font-style: italic;
   }
-  &::before, &::after {
-    content: "";
-    background: url("/assets/theme/assets/images/qoutes.svg") no-repeat center;
-    background-size: contain;
-    width: 86px;
-    height: 70px;
-    position: absolute;
+  .theme-container {
+    &::before, &::after {
+      content: "";
+      background: url("/assets/theme/assets/images/qoutes.svg") no-repeat center;
+      background-size: contain;
+      width: 86px;
+      height: 70px;
+      position: absolute;
+    }
+    &::before {
+      top: -10px;
+    }
+    &::after {
+      right: 14%;
+      bottom: -10px;
+    }
   }
-  &::before {left: 12%;top: -10px;}
-  &::after {right: 12%;bottom: -10px;}
 }
