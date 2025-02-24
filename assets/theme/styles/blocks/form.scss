@@ -1,5 +1,5 @@
 .block-form {
-  margin-top:60px;
+  padding: 50px 0;
   .form-grid {display: grid;grid-template-columns: repeat(6, 1fr);grid-gap: 51px;}
   .form {grid-column: 2 / span 4;
     .btn-container{

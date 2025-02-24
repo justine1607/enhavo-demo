@@ -1,8 +1,11 @@
 <div  class="block-swipe-teaser" data-controller="swiper-teaser">
-    <div class="theme-container">
-        <div class="slides" data-swiper-teaser-target="slide" >
+{#    <div class="theme-container">#}
+        <div class="slides slick-slider" data-swiper-teaser-target="slide" >
             <div class="media-wrapper" >
                 <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media-gradient">
+            </div>
+            <div class="media-wrapper">
+                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media">
             </div>
             <div class="text-wrapper">
                 <div class="text-container">
@@ -12,15 +15,12 @@
                 </div>
             </div>
             <div class="media-wrapper">
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media">
-            </div>
-            <div class="media-wrapper">
                 <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media-gradient">
             </div>
             <div class="media-wrapper">
                 <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media,'alt')}}" class="media-gradient">
             </div>
         </div>
-    </div>
+{#    </div>#}
 </div>
 

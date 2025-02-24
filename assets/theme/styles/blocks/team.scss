@@ -1,5 +1,5 @@
 .block-team {
-  margin-top:60px;
+  padding: 50px 0;
   .grid {display: grid;grid-template-columns: repeat(6, 1fr);gap: 51px;}
   .item {
     grid-column: span 2;

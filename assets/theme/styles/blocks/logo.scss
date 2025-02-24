@@ -1,5 +1,5 @@
 .block-logo {
-  margin-top:60px;
+  padding: 50px 0;
   .grid {display: grid;grid-template-columns: repeat(6, 1fr);gap: 55px;}
   .overline {grid-column: span 6;color: $textColor3;text-align: center;}
 }

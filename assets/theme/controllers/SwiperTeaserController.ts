@@ -7,24 +7,15 @@ export default class extends Controller {
 
     connect() {
         $(this.slideTarget).slick({
-            slidesToShow: 2,
-            centerMode:true,
+            slidesToShow: 2.5,
             slidesToScroll: 1,
-            autoplay: true,
+            centerMode:false,
+            centerPadding: '0px',
+            autoplay: false,
             arrows:false,
             dots: true,
             autoplaySpeed: 2000,
             pauseOnHover:true,
-            responsive: [
-                {
-                    breakpoint: 780,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode:true,
-                        slidesToScroll: 1,
-                    }
-                },
-            ]
         });
     }
 }

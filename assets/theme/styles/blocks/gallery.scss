@@ -1,5 +1,5 @@
 .block-gallery {
-  margin-top:60px;
+  padding: 50px 0;
   &.layout-gallery{
     .grid {display: grid;grid-template-columns: repeat(6, 1fr);gap: 50px;}
     .item{grid-column: span 2;

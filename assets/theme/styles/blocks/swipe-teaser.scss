@@ -1,32 +1,43 @@
 .block-swipe-teaser {
-  margin-top:60px;
-  .slick-slide{
-    margin: 0 27.5px;
+  padding: 50px 0;
+  .slick-slide {
     max-width: 472px;
+    margin: 0 27.5px;
   }
+  .slick-slider {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    padding-inline: 202px;
+  }
+  .slick-current {
+    opacity: 1;
+  }
+  .slick-track{display: flex!important;}
   .slick-list{
-    &.draggable{padding:0!important;}
+    overflow: hidden;
+    &.draggable{ padding-right: 236px!important;}
   }
   .slick-dots{
-      margin-top: 73px;
-      display: flex;justify-content: center;align-items: center;cursor: pointer;
-      li {
-        width: 10px;height: 10px;border-radius: 50%;border: 1px solid black;
-        margin: 0 2px;
+    margin-top: 73px;
+    display: flex;justify-content: center;align-items: center;cursor: pointer;
+    li {
+      width: 10px;height: 10px;border-radius: 50%;border: 1px solid black;
+      margin: 0 2px;
+      button {
+        &:before {color: unset;}
+        font{display: none;}
+        display: none;
+      }
+      &.slick-active {
+        background: black;
         button {
-          &:before {color: unset;}
+          &:before {color: unset}
           font{display: none;}
-          display: none;
-        }
-        &.slick-active {
-          background: black;
-          button {
-            &:before {color: unset}
-            font{display: none;}
-          }
         }
       }
     }
+  }
   .text-wrapper{padding-top: 32px;}
 }
 
