@@ -51,3 +51,27 @@
     .text-container {grid-column: 2 / span 4;}
   }
 }
+@include screenMaxWidth(1440px){
+  .block-gallery{
+    &.layout-gallery{
+      .grid{
+        gap: 20px;
+      }
+    }
+  }
+}
+@include screenMaxWidth(767px){
+  .block-gallery{
+    &.layout-gallery{
+      .item {
+        grid-column: span 6;
+        &:nth-child(2), &:nth-child(4), &:nth-child(5) {grid-column: span 6;}
+      }
+    }
+    &.layout-black{
+      .arrow-btn{grid-row: 3;}
+      .image-container{grid-column: span 6;}
+      .text-container{grid-column: span 6;margin-top: 50px;}
+    }
+  }
+}

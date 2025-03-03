@@ -15,24 +15,41 @@
                     "title": "Hier steht eine headline",
                     "copy": "Dies ist ein CTA"
                 },
+                 {
+                    "type": "Vollzeit",
+                    "title": "Hier steht eine headline",
+                    "copy": "Dies ist ein CTA"
+                },
+                 {
+                    "type": "Vollzeit",
+                    "title": "Hier steht eine headline",
+                    "copy": "Dies ist ein CTA"
+                },
+                 {
+                    "type": "Vollzeit",
+                    "title": "Hier steht eine headline",
+                    "copy": "Dies ist ein CTA"
+                },
+                 {
+                    "type": "Vollzeit",
+                    "title": "Hier steht eine headline",
+                    "copy": "Dies ist ein CTA"
+                },
+
                 {
                     "type": "Teilzeit",
                     "title": "Hier steht eine headline",
                     "copy": "Dies ist ein CTA"
                 },
                 {
+                      "type": "Teilzeit",
+                      "title": "Hier steht eine headline",
+                      "copy": "Dies ist ein CTA"
+                  },
+
+                {
                     "type": "Praktikum",
                     "title": "Dier steht eine headline",
-                    "copy": "Dies ist ein CTA"
-                },
-                {
-                    "type": "Vollzeit",
-                    "title": "Hier steht eine headline",
-                    "copy": "Dies ist ein CTA"
-                },
-                {
-                    "type": "Vollzeit",
-                    "title": "Hier steht eine headline",
                     "copy": "Dies ist ein CTA"
                 }
             ]

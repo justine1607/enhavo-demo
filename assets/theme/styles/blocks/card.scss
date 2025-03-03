@@ -1,25 +1,12 @@
 .block-card {
   padding: 50px 0;
   &.card-text {
-    .flex{
-      display: flex;align-items: center;
-      gap: 50px;
-      position: relative;
-    }
-    .media-container {
-      flex: 0 0 calc(50% - 25px);
-      max-width: calc(50% - 25px);
-      position: relative;
-    }
-    .text-container {
-      flex: 0 0 calc(50% - 25px);max-width: calc(50% - 25px);
-    }
+    .flex{gap: 50px;}
+    .media-container {flex: 1;}
+    .text-container {flex: 1;}
   }
   &.card-gradient {
-    .flex{
-      display: flex;align-items: center;
-      position: relative;
-    }
+    .flex{position: relative;}
     .media-container {
       position: relative;
       flex: 0 0 65.52%;
@@ -43,13 +30,42 @@
   }
   &.card-stacked {
     .flex{
-      display: flex;flex-direction: column;gap: 20px;
+      flex-direction: column;gap: 20px;
       margin: 0 auto;max-width: 733px;
     }
-    .text-container{
-      max-width: 733px;
-      .headline{padding: 5px 0 15px 0}
+  }
+  .flex{display: flex;align-items: center;}
+  .media-container{width: 100%;}
+}
+@include screenMaxWidth(1440px){
+  .block-card{
+    &.card-text{
+      .flex{gap: 20px;}
     }
+  }
+}
+@include screenMaxWidth(1024px){
+  .block-card{
+    &.card-gradient{
+      .text-container{position: unset;max-width: unset;margin-top: -65px;}
+    }
+    &.card-stacked{
+      .flex{ max-width: 622px;}
+    }
+    .flex{
+      max-width: 622px;
+      margin-inline: auto;
+      flex-direction: column;
+    }
+    .media-container{width: 100%;}
+  }
+}
+@include screenMaxWidth(768px){
+  .block-card{
+    &.card-stacked {
+      .flex {max-width: unset;}
+    }
+    .flex{max-width: unset;}
   }
 }
 

@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 import $ from "jquery";
 export default class extends Controller {
-    static targets = ["type", "typeContainer", "toggleIcon", "item","borderContainer"];
+    static targets = ["type", "typeContainer", "toggleIcon", "item","borderContainer","rightContainer"];
 
     connect() {
         this.showingTypes = false;
@@ -28,5 +28,6 @@ export default class extends Controller {
                 item.style.display = "none";
             }
         });
+
     }
 }

@@ -14,3 +14,34 @@
     }
   }
 }
+@include screenMaxWidth(1440px){
+  .block-team{
+    .grid{
+      gap: 20px;
+    }
+  }
+}
+@include screenMaxWidth(768px){
+  .block-team{
+    .item{
+      grid-column: span 3;
+      margin-top:0;
+      &:nth-of-type(4){
+        margin-top: 0;
+        grid-column: span 3;
+      }
+      &:nth-of-type(5){
+        margin-top: 0;
+        grid-column: 3/span 2;
+      }
+    }
+  }
+}
+@include screenMaxWidth(767px){
+  .block-team{
+    .item{grid-column: span 6;
+      &:nth-of-type(4){grid-column: span 6;}
+      &:nth-of-type(5){grid-column: span 6;}
+    }
+  }
+}

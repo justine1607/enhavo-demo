@@ -6,14 +6,17 @@
     .text-container {flex: 1;display: flex;flex-direction: column;justify-content: center;}
   }
   &.hero-black-flex {
-    background-color: #171717;
-    position: relative;
-    height: 565px;
+    .theme-container{
+      max-width: unset;
+      padding-inline: 0;
+    }
     .btn-wrapper{border: 1px solid $textColor1;}
     .flex {
+      padding-inline: 594px;
+      background-color: #171717;
+      position: relative;
+      height: 565px;
       display: flex;flex-direction: column;
-      max-width: 733px;
-      margin-inline: auto;
     }
     .media-container {
       padding-top: 32px;
@@ -28,5 +31,60 @@
     .theme-headline{
       &.boldHeadline{font-size: 5rem;line-height: 1.28em;}
     }
+  }
+}
+@include screenMaxWidth(1700px){
+  .block-hero{
+    &.hero-flex {
+      .flex {gap: 20px;}
+    }
+    &.hero-black-flex{
+      .flex{padding-inline:297px; }
+    }
+  }
+}
+@include screenMaxWidth(1440px){
+  .block-hero{
+    &.hero-flex {
+      .flex {gap: 20px;}
+    }
+  }
+}
+@include screenMaxWidth(1280px){
+  .block-hero{
+    &.hero-black-flex{
+      .flex{padding-inline: 257px;}
+    }
+  }
+}
+@include screenMaxWidth(1210px){
+  .block-hero{
+    &.hero-black-flex{
+      .flex{padding-inline: 129px;}
+    }
+  }
+}
+@include screenMaxWidth(1024px){
+  .block-hero{
+    .theme-container{padding-inline: 40px;}
+  }
+}
+@include screenMaxWidth(768px){
+  .block-hero{
+    &.hero-flex {
+      .flex {flex-direction: column;}
+    }
+    &.hero-black-flex{
+      .flex{padding-inline: 40px;}
+    }
+  }
+}
+@include screenMaxWidth(375px){
+  .block-hero{
+    &.hero-black-flex{
+      .flex{padding-inline: 20px;}
+      .btn-wrapper{padding: 15px 30px;display: block;}
+    }
+    .theme-container{padding-inline: 20px;}
   }
 }

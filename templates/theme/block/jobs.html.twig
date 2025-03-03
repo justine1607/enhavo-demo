@@ -1,32 +1,45 @@
 <div class="block-jobs" data-controller="jobs">
     <div class="theme-container">
-        <div class="flex" data-jobs-target="grid" >
+        <div class="flex" data-jobs-target="grid">
             <div class="left">
-                <div class="label" >
+                <div class="label">
                     <div class="span" data-jobs-target="borderContainer">
-                        <button class="overline" data-action="click->jobs#filterByJobType" data-job-type="" >Alle anzeigen</button>
-                        <div class="toggle-indicator" data-action="click->jobs#filterByJobType" data-jobs-target="toggleIcon" >
+                        <button class="overline" data-action="click->jobs#filterByJobType" data-job-type="">Alle anzeigen</button>
+                        <div class="toggle-indicator" data-action="click->jobs#filterByJobType" data-jobs-target="toggleIcon">
                             <span class="icon icons icons-chevron-down"></span>
                         </div>
                     </div>
                     <div class="types-container" data-jobs-target="typeContainer">
-                        {% for blocks in block.jobs %}
-                            <div class="items" data-jobs-target="type" data-action="click->jobs#filterItems">{{ blocks.type|html_sanitize }}</div>
+                        {% set jobTypes = [] %}
+                        {% for job in block.jobs %}
+                            {% if job.type not in jobTypes %}
+                                {% set jobTypes = jobTypes|merge([job.type]) %}
+                            {% endif %}
+                        {% endfor %}
+                        {% for type in jobTypes %}
+                            <div class="items" data-jobs-target="type" data-action="click->jobs#filterItems" data-type="{{ type }}">
+                                {{ type|html_sanitize }}
+                            </div>
                         {% endfor %}
                     </div>
                 </div>
             </div>
-            <div class="right">
-                {% for blocks in block.jobs %}
-                    <div class="items" data-jobs-target="item" data-type="{{ blocks.type }}">
-                        <div class="type" >{{ blocks.type|html_sanitize }}</div>
-                        <div class="text-container">
-                            <span class="theme-headline" >{{ blocks.title|html_sanitize }}</span>
-                            <span class="copy theme-copy" >{{ blocks.copy|html_sanitize }}</span>
-                        </div>
+            <div class="right" data-jobs-target="rightContainer">
+                {% for type in jobTypes %}
+                    <div class="job-group" data-job-type="{{ type }}">
+                        {% for job in block.jobs if job.type == type %}
+                            <div class="items" data-jobs-target="item" data-type="{{ job.type }}">
+                                <div class="type">{{ job.type|html_sanitize }}</div>
+                                <div class="text-container">
+                                    <span class="theme-headline">{{ job.title|html_sanitize }}</span>
+                                    <span class="copy theme-copy">{{ job.copy|html_sanitize }}</span>
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
                 {% endfor %}
             </div>
+
         </div>
     </div>
 </div>

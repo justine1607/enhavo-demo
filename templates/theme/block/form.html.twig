@@ -17,9 +17,9 @@
                                 <option value="{{ option.value }}">{{ option.label }}</option>
                             {% endfor %}
                         </select>
-                    {% elseif item.type == 'textarea' %}
-                        <textarea name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" required="{{ item.is_required ? 'required' }}"></textarea>
-                    {% else %}
+                        {% elseif item.type == 'textarea' %}
+                            <textarea name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" required="{{ item.is_required ? 'required' }}"></textarea>
+                        {% else %}
                         <input type="{{ item.type }}" name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" required="{{ item.is_required ? 'required' }}">
                     {% endif %}
                     {% if item.is_required %}

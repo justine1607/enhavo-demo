@@ -1,5 +1,6 @@
 .block-jobs {
   padding: 50px 0;
+  .copy {pointer-events: none;color: #000;padding: 5px 0 15px 0;}
   .caret-button {cursor: pointer;}
   .caret-up.open-job {margin-right: 10px;font-size: 24px;cursor: pointer;max-height: 100%;}
   .flex {display: flex;gap: 51px;}
@@ -9,15 +10,17 @@
   .overline {
     color: $textColor3;font-size: 1.5rem;@include typoOverline;cursor: pointer;
   }
+  .type {padding:20px 0 0 ;@include typoOverline;}
+  .text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
   .right {
-    flex: 0 0 calc(67% - 25.5px);max-width: calc(67% - 25.5px);
+    flex: 0 0 calc(67% - 25.5px);
+    max-width: calc(67% - 25.5px);
     .items {
       border-bottom: 2px solid black;
-      .type {padding: 1.5rem 0;@include typoOverline;}
-      .text-container {
-        display: flex;justify-content: space-between;align-items: flex-end;
-        .copy {pointer-events: none;color: #000;}
-      }
     }
   }
   .span {
@@ -36,6 +39,48 @@
     opacity: 0;
     .items{padding: 15px 0;cursor: pointer}
     &.visible{display: block;opacity: 1;}
+  }
+}
+@include screenMaxWidth(1440px){
+  .block-jobs{
+    .flex{gap: 20px;}
+    .left{
+      flex: 0 0 calc(33% - 10px);max-width: calc(33% - 10px)
+    }
+    .right{
+      flex: 0 0 calc(67% - 10px);max-width: calc(67% - 10px);
+      .job-group .items:first-of-type .type {
+        padding-top: 0;
+      }
+    }
+  }
+}
+@include screenMaxWidth(1024px){
+  .block-jobs{
+    .theme-container{padding-inline: 40px;}
+  }
+}
+@include screenMaxWidth(1023px){
+  .block-jobs{
+    .flex{flex-direction: column;}
+    .left{max-width: 100%;}
+    .right{max-width: 100%;}
+  }
+}
+@include screenMaxWidth(767px){
+  .block-jobs{
+    .copy{padding: 0 0 5px;}
+    .text-container{
+      padding-top: 5px;
+      flex-direction: column;gap: 10px;align-items: flex-start;}
+    .theme-headline{padding: 0;}
+    .type{padding: 25px 0 0;}
+
+  }
+}
+@include screenMaxWidth(375px){
+  .block-jobs{
+    .theme-container{padding-inline: 20px;}
   }
 }
 

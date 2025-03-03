@@ -12,8 +12,7 @@
     .error-border {border: 1px solid red !important;}
     input[type="text"],
     input[type="email"],
-    select,
-    textarea{margin: 9px 0 20px 0;}
+    select,textarea{margin: 9px 0 20px 0;}
     input[type="text"],
     input[type="email"],
     textarea,
@@ -67,9 +66,15 @@
     select,
     #vorname::placeholder{color: #CBCBCB;}
   }
-    .text-container {grid-column: 2 / span 4;}
-    .theme-headline{
-      &.boldHeadline{font-size: 5rem;line-height: 1.28em;}
-    }
-    .text {margin-top: 30px;text-transform: capitalize;font-size: 1.6rem;line-height: 1.25em;font-weight: 700;}
+  .text-container {grid-column: 2 / span 4;}
+  .theme-headline{
+    &.boldHeadline{font-size: 5rem;line-height: 1.28em;}
+  }
+  .text {margin-top: 30px;font-size: 1.6rem;line-height: 1.25em;font-weight: 700;}
+}
+@include screenMaxWidth(768px){
+  .block-form{
+    .form{grid-column: span 6;}
+    .text-container{grid-column: span 6;}
+  }
 }

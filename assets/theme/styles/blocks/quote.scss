@@ -2,18 +2,7 @@
     position: relative;
     background: $textColor3;
     margin: 50px 0;
-    height: 298px;display: flex;justify-content: center;align-items: center;
-  .container {max-width: 993px;margin-inline: auto; }
-  .caption {
-    padding: 15px 0 0 0 ;
-    color: #FFF;
-    text-transform: capitalize;text-align: center;
-  }
-  .headline{
-    color: $textColor1;
-    text-transform: inherit;
-    font-style: italic;
-  }
+    padding: 60px 0;
   .theme-container {
     &::before, &::after {
       content: "";
@@ -27,8 +16,36 @@
       top: -10px;
     }
     &::after {
-      right: 14%;
+      right: 15%;
       bottom: -10px;
     }
+  }
+  .text-container{text-align: center;padding-inline: 202px;}
+  .caption {
+    padding: 15px 0 0 0 ;
+    color: #FFF;
+    text-transform: capitalize;text-align: center;
+  }
+  .headline{
+    color: $textColor1;
+    text-transform: inherit;
+    font-style: italic;
+  }
+}
+@include screenMaxWidth(1024px){
+  .block-quote{
+    .text-container{padding-inline: 75px;}
+    .theme-container{
+      padding-inline: 41px;
+      &::after{
+        right: 5%;
+      }
+    }
+  }
+}
+@include screenMaxWidth(767px){
+  .block-quote{
+    .theme-container{padding-inline: 20px;}
+    .text-container{padding-inline: 0;}
   }
 }
