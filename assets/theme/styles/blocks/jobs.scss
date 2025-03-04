@@ -4,17 +4,11 @@
   .caret-button {cursor: pointer;}
   .caret-up.open-job {margin-right: 10px;font-size: 24px;cursor: pointer;max-height: 100%;}
   .flex {display: flex;gap: 51px;}
-  .icons-chevron-down:before {content: "\2228";}
+  .icons-chevron-down:before{content: "\2228";}
   .left {flex: 0 0 calc(33% - 25.5px);max-width: calc(33% - 25.5px)}
   .label {padding-inline: 10px;border: 1px solid black;}
   .overline {
     color: $textColor3;font-size: 1.5rem;@include typoOverline;cursor: pointer;
-  }
-  .type {padding:20px 0 0 ;@include typoOverline;}
-  .text-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
   }
   .right {
     flex: 0 0 calc(67% - 25.5px);
@@ -31,8 +25,14 @@
       border-bottom: 1px solid #171717;
     }
   }
+  .type {padding:20px 0 0 ;@include typoOverline;}
+  .text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
   .toggle-indicator {display: block;
-    &.visible{transform:scaleY(-1);}
+    &.visible{transform: rotate(180deg);}
   }
   .types-container {
     display: none;
@@ -44,20 +44,11 @@
 @include screenMaxWidth(1440px){
   .block-jobs{
     .flex{gap: 20px;}
-    .left{
-      flex: 0 0 calc(33% - 10px);max-width: calc(33% - 10px)
-    }
+    .left{flex: 0 0 calc(33% - 10px);max-width: calc(33% - 10px)}
     .right{
       flex: 0 0 calc(67% - 10px);max-width: calc(67% - 10px);
-      .job-group .items:first-of-type .type {
-        padding-top: 0;
-      }
+      .job-group .items:first-of-type .type {padding-top: 0;}
     }
-  }
-}
-@include screenMaxWidth(1024px){
-  .block-jobs{
-    .theme-container{padding-inline: 40px;}
   }
 }
 @include screenMaxWidth(1023px){
@@ -76,11 +67,6 @@
     .theme-headline{padding: 0;}
     .type{padding: 25px 0 0;}
 
-  }
-}
-@include screenMaxWidth(375px){
-  .block-jobs{
-    .theme-container{padding-inline: 20px;}
   }
 }
 

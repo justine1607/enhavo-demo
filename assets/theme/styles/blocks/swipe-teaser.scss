@@ -15,8 +15,6 @@
   .slick-track{display: flex!important;gap: 50px;}
   .slick-list{
     overflow: hidden;
-    padding-left: 150px;
-    padding-right: 160px;
   }
   .slick-dots{
     margin-top: 73px;
@@ -48,7 +46,10 @@
 }
 @include screenMaxWidth(1440px){
   .block-swipe-teaser{
-    .slick-list{padding-inline: 0!important;}
+    .media-wrapper{width: 413px;}
+    .slick-list{padding-left: 290px !important;padding-right: 0 !important;}
+    .slick-track{gap: 20px}
+    .text-wrapper{width: 413px;}
     .theme-container{padding-inline: 10px;}
     .wrapper{gap: 20px;}
   }
@@ -71,6 +72,8 @@
 @include screenMaxWidth(767px){
   .block-swipe-teaser{
     .slick-list{padding-inline: 0!important;}
+    .slick-track{gap: 0;}
+    .theme-container{padding-inline: 20px;}
   }
 }
 

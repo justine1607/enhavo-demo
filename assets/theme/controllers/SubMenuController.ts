@@ -1,12 +1,13 @@
 import { Controller } from "@hotwired/stimulus";
-import $ from 'jquery';
+import $ from "jquery";
 
 export default class extends Controller {
-    static targets = ["header","menuContainer"];
+    static targets = ["header", "menuContainer", "navBar","subMenu","toggleIcon","toggleMenu"];
 
-    public static values  = {
-        mainMenuOpen: {type: Boolean, default: false}
-    }
+    static values = {
+        mainMenuOpen: { type: Boolean, default: false }
+    };
+
     connect() {
         this.navItems = document.querySelectorAll(".nav-item.has-submenu");
 
@@ -15,31 +16,33 @@ export default class extends Controller {
             item.addEventListener("mouseleave", this.resetHeader.bind(this));
         });
     }
-
     expandHeader() {
         if (this.hasHeaderTarget) {
-            this.headerTarget.style.height = "350px";
+            this.headerTarget.classList.add('header-hover');
         }
     }
-
     resetHeader() {
         if (this.hasHeaderTarget) {
-            this.headerTarget.style.height = "";
+            this.headerTarget.classList.remove('header-hover');
         }
     }
 
-    disconnect() {
-        this.navItems.forEach(item => {
-            item.removeEventListener("mouseenter", this.expandHeader.bind(this));
-            item.removeEventListener("mouseleave", this.resetHeader.bind(this));
-        });
-    }
     button() {
         this.mainMenuOpenValue = !this.mainMenuOpenValue;
     }
-    mainMenuOpenValueChanged()
-    {
-        this.mainMenuOpenValue ? $(this.element).addClass('menu-open') : $(this.element).removeClass('menu-open');
-    }
 
+    mainMenuOpenValueChanged() {
+        this.mainMenuOpenValue
+            ? $(this.element).addClass("menu-open")
+            : $(this.element).removeClass("menu-open");
+    }
+    headline(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        this.subMenuTarget.classList.toggle('open-submenu');
+        const parentItem = event.currentTarget.closest(".has-submenu");
+
+        parentItem.classList.toggle("chevron-rotate");
+    }
 }

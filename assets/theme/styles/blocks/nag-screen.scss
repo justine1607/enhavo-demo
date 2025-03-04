@@ -50,7 +50,6 @@
 }
 @include screenMaxWidth(1024px){
   .block-nag-screen{
-    .theme-container{padding-inline: 40px;}
     .text-container{padding-inline:166px; }
   }
 }

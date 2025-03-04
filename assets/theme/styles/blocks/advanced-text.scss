@@ -18,3 +18,32 @@
   }
   .flex{max-width: 993px;margin-inline: auto;}
 }
+@include screenMaxWidth(1024px){
+  .block-advance-text{
+    &.advance-two-column{
+      .text-container{
+        flex-direction: column;gap: 60px;
+        .text{
+          &:not(:first-child){
+            padding-left: 161px;
+          }
+        }
+      }
+    }
+  }
+}
+@include screenMaxWidth(768px){
+  .block-advance-text{
+    &.advance-two-column {
+      .text-container {
+        gap: 20px;
+        .text {
+          &:not(:first-child) {
+            padding-left: 0;
+          }
+        }
+      }
+      .button-container {margin-left: 0;}
+    }
+  }
+}

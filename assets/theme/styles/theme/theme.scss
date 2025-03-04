@@ -36,34 +36,23 @@ footer{
      .label{font-size: 1.8rem;text-transform: uppercase;}
    }
   .label{color: $textColor1;}
-   .right{display: flex;place-items: end;justify-content: space-between;gap: 50px;
-   }
+  .right{display: flex;place-items: end;justify-content: space-between;gap: 50px;}
  }
-html{
-  &.menu-open{
-    header{
-      .menu-container{display: block;}
-      .menu-toggle {margin-top: 0;
-         .lines {
-           transition: all 0.3s ease;
-           left:0;
-           &:after {transform: rotate(45deg);bottom:13px; width: 34px}
-           &:before {transform: rotate(-45deg);top:10px; width: 34px}
-           .line {opacity:0;}
-         }
-     }
-    }
-  }
-}
-.header-info {
-  display: flex;align-items: center;
-   .number {margin-right: 0.5rem;text-align: right;color: #FFFFFF;font-weight: 400;font-size: 18px;}
- }
-header {position: fixed;top: 0;width: 100%;background-color: #171717;z-index: 20;
+header {
+  position: fixed;top: 0;width: 100%;
+  background-color: #171717;
+  z-index: 20;
   transition: height 0.3s ease;
-  .nav {position: relative;}
-  .navbar {display: flex;justify-content: space-between;padding: 3.90rem 0;}
-  .header-img {display: flex;gap: 15px;align-items: center;}
+  &.header-hover{
+    height: 443px;
+    .navbar{border-bottom: 1px solid white;}
+  }
+  .header-info {
+    display: flex;align-items: center;
+    .number {margin-right: 0.5rem;text-align: right;color: #FFFFFF;font-weight: 700;font-size: 24px;}
+  }
+  .hamburger {display: none;cursor: pointer;color: #fff;font-size: $fontSizeHeadline1;}
+  .logo-wrapper {display: flex;gap: 15px;align-items: center;}
   .menu-toggle {position:relative;width:35px;height:35px;cursor:pointer;z-index: 666;
     .lines {position:absolute;top:5px;left:5px;width:calc(100% - 10px);height:calc(100% - 10px);
       &:after {content: "";position: absolute;bottom:4px;left:0;width:100%;height:2px;background:white;transition: all 200ms;}
@@ -71,69 +60,73 @@ header {position: fixed;top: 0;width: 100%;background-color: #171717;z-index: 20
       .line {position: absolute;bottom:12px;left:0;width:100%;height:2px;background:white;transition: all 200ms;}
     }
   }
-  .hamburger {display: none;cursor: pointer;color: #fff;font-size: $fontSizeHeadline1;}
+  .nav {position: relative;}
+  .navbar {display: flex;justify-content: space-between;padding: 19px 0;}
+  .menu-container {
+    display: flex;
+    a {
+      color: $textColor1;
+      font-size:24px;
+      cursor: pointer;
+      position: relative;
+      text-transform: uppercase;
+      text-decoration: none;
+      &:hover {font-weight: 700;}
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+    .nav-item {
+      position: relative;
+      display: flex;
+      &.has-submenu {
+        display: flex;
+        justify-content: flex-start;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 3px;
+        background-color: #FFFFFF;
+        transition: width 0.3s ease;
+      }
+      &:hover:after {
+        width: 100%;
+        z-index: 2;
+      }
+      &:hover .sub-menu {
+        padding-top: 50px;
+        display: block;
+        opacity: 1;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        li {
+          padding: 20px 0;
+          &:first-child{
+            padding-top: 30px;
+          }
+        }
+        a{font-weight: 400;}
+      }
+    }
+    .sub-menu {
+      display: none;
+      opacity: 0;
+      width: 100%;
+      min-width: 200px;
+    }
+    .toggle-indicator {
+      display: none;
+    }
+  }
 }
 img {width: 100%;display: block;}
-.menu-container {
-  display: flex;
-  &.open-menu{display: flex}
-  .menu {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-  }
-
-  li {
-    position: relative;
-    list-style-type: none;
-  }
-
-  .nav-item {
-    position: relative;
-
-    &:hover .sub-menu {
-      display: block;
-      opacity: 1;
-      position: absolute;
-      top: 100%;
-      left: 0;
-
-      a {
-        font-style: italic;
-      }
-
-      li {
-        padding: 20px 0;
-      }
-    }
-  }
-
-  a {
-    color: $textColor1;
-    font-weight: 400;
-    font-size: 18px;
-    cursor: pointer;
-    position: relative;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    &:hover {
-      font-weight: 700;
-    }
-  }
-
-  .submenu-container {
-    position: relative;
-  }
-
-  .sub-menu {
-    display: none;
-    opacity: 0;
-    width: 100%;
-    min-width: 200px;
-    list-style: none;
-  }
-}
 .theme-container{margin: 0 auto;max-width: 1920px;width: 100%;padding-inline:201px;}
 .theme-overline{@include typoOverline;}
 .theme-headline{@include typoHeadline;
@@ -142,17 +135,115 @@ img {width: 100%;display: block;}
   .theme-container{padding-inline: 80px;}
 }
 @include screenMaxWidth(1280px){
+  header{
+    .header-info{margin-left: auto;}
+    .navbar{justify-content: unset;}
+    .menu-container{
+      margin-left: 249px;
+      .menu{gap: 50px;}
+    }
+  }
   .theme-container{padding-inline: 60px;}
 }
-@include screenMaxWidth(768px){
+@include screenMaxWidth(1260px){
+  header{
+    .header-info{margin-left: unset;}
+    .menu-container{margin-left: 0;}
+    .navbar{justify-content: space-between;}
+    .theme-container{padding-inline: 40px;}
+  }
+}
+@include screenMaxWidth(1024px){
   .theme-container{padding-inline: 40px;}
+}
+@include screenMaxWidth(920px){
+  html{
+    &.menu-open{
+      header{
+        .header-info{width: 100%;display: block;padding-top: 20px;}
+        .icons-chevron-down{
+          color: white;font-size: 50px;
+          cursor: pointer;
+          &:before {content: "\2228";}
+        }
+        .logo-wrapper{border-bottom: 1px solid white;padding-bottom: 17px;}
+        .nav-item{
+          &:after{content: none;}
+          &.has-submenu{align-items: flex-start;}
+          .sub-menu {
+            &.open-submenu{
+              padding-top:0;
+              display: block;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              position: static;
+              opacity: 1;
+              left: 0;
+              a {font-weight: 400;}
+              li {padding: 20px 0;
+                &:first-child {padding-top: 20px;}
+              }
+            }
+          }
+        }
+        .navbar{flex-direction: column;align-items: flex-start;gap: 0;}
+        .menu{flex-direction: column;align-items: unset; justify-content: flex-start;gap: 8px;}
+        .menu-container{padding: 30px 0 25px;;display: block;width: 100%;border-bottom: 1px solid white;}
+        .menu-toggle {margin-top: 0;
+          .lines {
+            transition: all 0.3s ease;
+            left:0;
+            &:after {transform: rotate(45deg);bottom:13px; width: 34px}
+            &:before {transform: rotate(-45deg);top:10px; width: 34px}
+            .line {opacity:0;}
+          }
+        }
+      }
+    }
+  }
+  header{
+    &.header-hover{
+      height: unset;
+      .navbar{border-bottom: none;}
+      .nav-item{
+        &:hover .sub-menu{
+          display: none;
+          padding-top: 0;
+        }
+      }
+    }
+    .header-info{display: none;}
+    .hamburger{display: block;}
+    .logo-wrapper{width: 100%;justify-content: space-between;}
+    .menu-container {
+      display: none;
+      a{padding-top: 22px;}
+      .toggle-indicator {
+        margin-left: auto;
+        display: flex;justify-content: center;align-items: center;
+        padding-bottom: 20px;
+      }
+      .has-submenu{
+        &.chevron-rotate{
+          .toggle-indicator {transform: scaleY(-1);}
+        }
+      }
+    }
+    .navbar{align-items: center;}
+    .submenu-container{padding-top: 22px;}
+  }
+}
+@include screenMaxWidth(768px){
+  footer{
+    .contact-row{flex-direction: column;}
+    .left{border-bottom: 1px solid white;padding-bottom: 20px;}
+    .right{
+      padding-top: 30px;
+      flex-direction: column;place-items: flex-start;gap: 30px;
+    }
+  }
 }
 @include screenMaxWidth(375px){
   .theme-container{padding-inline: 20px;}
-}
-@include screenMaxWidth(1024px){
-  header{
-    .menu-container,.header-info{display: none;}
-    .hamburger{display: block;}
-  }
 }

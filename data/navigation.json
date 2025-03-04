@@ -67,7 +67,7 @@
           "subject": {
             "id": 2,
             "title": "Imprint",
-            "url": "expr:ref('page/imprint.json', 'resource.url')"
+            "url": "expr:ref('page/homepage.json', 'resource.url')"
           },
           "label": "Blog",
           "active": false,

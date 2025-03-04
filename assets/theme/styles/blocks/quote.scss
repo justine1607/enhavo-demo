@@ -3,24 +3,6 @@
     background: $textColor3;
     margin: 50px 0;
     padding: 60px 0;
-  .theme-container {
-    &::before, &::after {
-      content: "";
-      background: url("/assets/theme/assets/images/qoutes.svg") no-repeat center;
-      background-size: contain;
-      width: 86px;
-      height: 70px;
-      position: absolute;
-    }
-    &::before {
-      top: -10px;
-    }
-    &::after {
-      right: 15%;
-      bottom: -10px;
-    }
-  }
-  .text-container{text-align: center;padding-inline: 202px;}
   .caption {
     padding: 15px 0 0 0 ;
     color: #FFF;
@@ -31,21 +13,45 @@
     text-transform: inherit;
     font-style: italic;
   }
+  .theme-container {
+    &::before{
+      content: "";
+      background: url("/assets/theme/assets/images/qoutes.svg") no-repeat center;
+      background-size: contain;
+      width: 86px;
+      height: 70px;
+      position: absolute;
+      top: -10px;
+    }
+  }
+  .text-container{
+    position: relative;
+    text-align: center;
+    padding-inline: 202px;
+    &::after {
+      content: "";
+      background: url("/assets/theme/assets/images/qoutes.svg") no-repeat center;
+      background-size: contain;
+      width: 86px;
+      height: 70px;
+      position: absolute;
+      right: 0;
+    }
+  }
 }
 @include screenMaxWidth(1024px){
   .block-quote{
     .text-container{padding-inline: 75px;}
     .theme-container{
-      padding-inline: 41px;
       &::after{
         right: 5%;
       }
     }
   }
 }
-@include screenMaxWidth(767px){
+@include screenMaxWidth(768px){
   .block-quote{
-    .theme-container{padding-inline: 20px;}
-    .text-container{padding-inline: 0;}
+    .caption{padding: 15px 0;}
+    .theme-headline{padding-top: 15px;padding-bottom: 0;}
   }
 }

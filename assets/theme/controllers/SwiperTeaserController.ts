@@ -17,28 +17,14 @@ export default class extends Controller {
             pauseOnHover: true,
             responsive: [
                 {
-                    breakpoint: 1440,
-                    settings: {
-                        slidesToShow: 2,
-                        centerMode: true
-                    }
-                },
-                {
                     breakpoint: 1025,
                     settings: {
                         slidesToShow: 1,
                         centerMode:true,
                     }
                 },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode:true,
-                    }
-                }
             ]
         });
 
-        }
+    }
 }

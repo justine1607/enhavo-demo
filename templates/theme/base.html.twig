@@ -24,21 +24,20 @@
     {% block header %}
         <header data-sub-menu-target="header">
             <div class="theme-container">
-                <div class="navbar">
-                    <div class="header-img">
-                        <a href="#" class="logo-paw-link"><img src="{{ asset('build/theme/images/pfote.svg')}}" alt="nav_img" class="paw-logo" /></a>
-                        <a href="#" class="logo-link"><img src="{{ asset('build/theme/images/logo.svg') }}" alt="nav_img" class="text-logo" /></a>
+                <div class="navbar" data-sub-menu-target="navbar">
+                    <div class="logo-wrapper">
+                        <a href="#" class="logo-paw-link"><img src="{{ asset('build/theme/images/logo.png')}}" alt="nav_img" class="paw-logo" /></a>
+                        <div class="hamburger">
+                            <div class="menu-toggle" data-action="click->sub-menu#button">
+                                <div class="lines">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     {% include 'theme/navigation/main.html.twig' %}
                     <div class="header-info">
                         <span class="number">+49 (0) 89 1234 5678 90</span>
-                    </div>
-                    <div class="hamburger">
-                        <div class="menu-toggle" data-action="click->sub-menu#button">
-                            <div class="lines">
-                                <div class="line"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -54,8 +53,7 @@
             <div class="theme-container">
                 <div class="contact-row">
                     <div class="left">
-                        <div class="label logo">logo</div>
-                        <div class=" label" >copyright</div>
+                        <div class="label logo">© 2024 I YOuR BRAND</div>
                     </div>
                     <div class="right">
                         <a href="#" class="label">DATENSCHUTZ</a>

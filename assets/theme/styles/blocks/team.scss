@@ -16,13 +16,12 @@
 }
 @include screenMaxWidth(1440px){
   .block-team{
-    .grid{
-      gap: 20px;
-    }
+    .grid{gap: 20px;}
   }
 }
 @include screenMaxWidth(768px){
   .block-team{
+    .grid{grid-row-gap: 50px;}
     .item{
       grid-column: span 3;
       margin-top:0;

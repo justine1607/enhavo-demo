@@ -47,6 +47,7 @@
 @include screenMaxWidth(1024px){
   .block-card{
     &.card-gradient{
+      .media-container::before{rotate: 180deg;}
       .text-container{position: unset;max-width: unset;margin-top: -65px;}
     }
     &.card-stacked{

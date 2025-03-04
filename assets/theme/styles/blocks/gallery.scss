@@ -12,6 +12,7 @@
     .arrow-btn{
       cursor: pointer;
       display: flex;align-items: center;
+      svg{height: 27px;}
     }
     .copy {color: $textColor1;padding-top: 7px;}
     .ex-toggle {

@@ -28,9 +28,9 @@
       color: $textColor1;
       padding-top: 50px;
     }
-    .theme-headline{
-      &.boldHeadline{font-size: 5rem;line-height: 1.28em;}
-    }
+  }
+  .theme-headline{
+    &.boldHeadline{font-size: 5rem;line-height: 1.28em;}
   }
 }
 @include screenMaxWidth(1700px){
@@ -82,8 +82,8 @@
 @include screenMaxWidth(375px){
   .block-hero{
     &.hero-black-flex{
-      .flex{padding-inline: 20px;}
       .btn-wrapper{padding: 15px 30px;display: block;}
+      .flex{padding-inline: 20px;}
     }
     .theme-container{padding-inline: 20px;}
   }
