@@ -8,29 +8,44 @@
             </div>
             <form class="form" data-controller="form" novalidate>
                 {% for item in block.form %}
-                    {% set input_id = item.label|replace({' ': '-'})|lower %}
+                    {% set input_id = item.type|replace({' ': '-'})|lower %}
                     <label for="{{ input_id }}" class="label">{{ item.label|html_sanitize }}</label>
                     {% if item.type == 'select' %}
-                        <select name="{{ item.label }}" id="{{ input_id }}" required="{{ item.is_required ? 'required' }}">
-                            <option value="">Auswählen</option>
+                    <div class="custom-select" data-form-target="openValue">
+                        <input type="hidden" name="{{ item.label }}" id="{{ input_id }}" {% if item.is_required %}required{% endif %}>
+                        <div class="wrapper" data-action="click->form#openOptions">
+                            <div class="option-display" data-form-target="optionDisplay">Auswählen</div>
+                            <div class="toggle-indicator" data-form-target="toggleIndicator">
+                                <span class="icon icons icons-chevron-down"></span>
+                            </div>
+                        </div>
+                        <div class="options-value">
                             {% for option in item.options %}
-                                <option value="{{ option.value }}">{{ option.label }}</option>
+                                <div class="option-item" data-value="{{ option.value }}" data-action="click->form#selectOption">
+                                    {{ option.label }}
+                                </div>
                             {% endfor %}
-                        </select>
-                        {% elseif item.type == 'textarea' %}
-                            <textarea name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" required="{{ item.is_required ? 'required' }}"></textarea>
-                        {% else %}
-                        <input type="{{ item.type }}" name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" required="{{ item.is_required ? 'required' }}">
+                        </div>
+                    </div>
+                    {% elseif item.type == 'textarea' %}
+                        <textarea name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" required="{{ item.is_required ? 'required' }}"></textarea>
+                    {% else %}
+                    <input type="{{ item.type }}" name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" required="{{ item.is_required ? 'required' }}">
                     {% endif %}
                     {% if item.is_required %}
                         <div class="required-message">Dieses Feld muss ausgefüllt sein.</div>
                     {% endif %}
                 {% endfor %}
                 <div class="checkbox-group">
-                    <input type="checkbox" name="{{ block.label }}" id="checkbox-{{ block.label|replace({' ': '-'})|lower }}" required>
-                    <label for="checkbox-{{ block.label|replace({' ': '-'})|lower }}" class="checkbox-label">
-                        {{ block.label|html_sanitize }}
-                    </label>
+                    <div class="content-wrapper">
+                        <input type="checkbox" name="{{ block.label }}" id="checkbox-{{ block.label|replace({' ': '-'})|lower }}" required>
+                        <label for="checkbox-{{ block.label|replace({' ': '-'})|lower }}" class="checkbox-label">
+                            {{ block.label|html_sanitize }}
+                        </label>
+                    </div>
+                    {% if block.is_required %}
+                        <div class="required-message">Dieses Feld muss ausgefüllt sein.</div>
+                    {% endif %}
                 </div>
                 <div class="btn-container">
                     <a data-action="click->form#validateForm" class="theme-cta cta theme-button">{{ block.ctaTitle }}</a>

@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus";
 import $ from "jquery";
 
 export default class extends Controller {
-    static targets = ["header", "menuContainer", "navBar","subMenu","toggleIcon","toggleMenu"];
+    static targets = ["header", "menuToggle", "menuContainer", "navBar","subMenu","toggleIcon","toggleMenu"];
 
     static values = {
         mainMenuOpen: { type: Boolean, default: false }
@@ -29,6 +29,7 @@ export default class extends Controller {
 
     button() {
         this.mainMenuOpenValue = !this.mainMenuOpenValue;
+        this.menuToggleTarget.classList.toggle('close-icon');
     }
 
     mainMenuOpenValueChanged() {

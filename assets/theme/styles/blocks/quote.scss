@@ -52,6 +52,12 @@
 @include screenMaxWidth(768px){
   .block-quote{
     .caption{padding: 15px 0;}
-    .theme-headline{padding-top: 15px;padding-bottom: 0;}
+    .headline{padding-top: 15px;padding-bottom: 0;}
+  }
+}
+@include screenMaxWidth(767px){
+  .block-quote{
+    .text-container{padding-inline: 0;}
+    .theme-container{padding-inline: 20px;}
   }
 }

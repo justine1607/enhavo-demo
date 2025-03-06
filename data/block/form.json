@@ -22,30 +22,31 @@
                         {"value": "herr", "label": "Herr"},
                         {"value": "frau", "label": "Frau"},
                         {"value": "divers", "label": "Divers"}
+
                     ]
                 },
                 {
                     "type": "email",
-                    "label": "VORNAME",
+                    "label": "VORNAME*",
                     "placeholder": "VORNAME",
                     "is_required": true
                 },
                 {
                     "type": "text",
-                    "label": "NACHNAME",
-                    "placeholder": "ILLENBERGER",
-                    "is_required": false
+                    "label": "NACHNAME*",
+                    "placeholder": "NACHNAME",
+                    "is_required": true
                 },
                 {
                     "type": "textarea",
                     "label": "NACHRICHT",
-                    "placeholder": "HALLO, ICH HABE EINE FRAGE.",
+                    "placeholder": "ICH NACHRICHT",
                     "is_required": true
                 }
             ],
             "type":"checkbox",
             "label":"Hiermit erkläre ich, dass ich die AGB aufmerksam gelesen habe und dass ich. Meine Einwilligung zur Verarbeitung meiner persönlichen Daten gemäß geltender Datenschutzverordung gebe.",
-            "is_required": null,
+            "is_required": true,
             "ctaTitle": "KONTAKT AUFNEHMEN",
             "ctaLink": "http://google.com",
             "ctaTarget": "_blank"

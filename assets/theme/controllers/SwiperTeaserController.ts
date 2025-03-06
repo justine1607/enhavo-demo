@@ -3,12 +3,13 @@ import $ from 'jquery';
 import 'slick-carousel';
 
 export default class extends Controller {
-    static targets = ["slide", "navButton"];
+    static targets = ["slide"];
 
     connect() {
         $(this.slideTarget).slick({
             slidesToShow: 2,
-            centerMode:true,
+            centerMode: true,
+            variableWidth: true,
             slidesToScroll: 1,
             autoplay: false,
             arrows: false,
@@ -20,11 +21,11 @@ export default class extends Controller {
                     breakpoint: 1025,
                     settings: {
                         slidesToShow: 1,
-                        centerMode:true,
+                        centerMode: true,
+                        variableWidth: true,
                     }
                 },
             ]
         });
-
     }
 }

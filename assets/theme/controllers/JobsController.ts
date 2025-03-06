@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 import $ from "jquery";
 export default class extends Controller {
-    static targets = ["type", "typeContainer", "toggleIcon", "item","borderContainer","rightContainer"];
+    static targets = ["type", "typeContainer", "item","borderContainer","rightContainer"];
 
     connect() {
         this.showingTypes = false;
@@ -15,7 +15,6 @@ export default class extends Controller {
     toggleJobTypesVisibility() {
         this.showingTypes = !this.showingTypes;
         this.typeContainerTarget.classList.toggle('visible', this.showingTypes);
-        this.toggleIconTarget.classList.toggle('visible', this.showingTypes);
         this.borderContainerTarget.classList.toggle('visible', this.showingTypes);
     }
     filterItems(e) {

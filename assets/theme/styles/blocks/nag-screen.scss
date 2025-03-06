@@ -26,7 +26,6 @@
   .overline {text-align: center;}
   .text-container{padding-inline: 262px;}
   .theme-headline {
-    max-width: 471px;
     margin-top: 10px;
     text-align: center;
     &.boldHeadline{font-size: 5rem;line-height: 1.28em;}
@@ -58,9 +57,13 @@
     .text-container{padding-inline:51px; }
   }
 }
-@include screenMaxWidth(375px){
+@include screenMaxWidth(767px){
+  .block-nag-screen{
+    .text-container{padding-inline:20px; }
+  }
+}
+@include screenMaxWidth(410px){
   .block-nag-screen{
     .theme-container{padding-inline: 0;}
-    .text-container{padding-inline:20px; }
   }
 }
