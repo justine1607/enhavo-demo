@@ -41,7 +41,7 @@
                     "type": "textarea",
                     "label": "NACHRICHT",
                     "placeholder": "ICH NACHRICHT",
-                    "is_required": true
+                    "is_required": false
                 }
             ],
             "type":"checkbox",

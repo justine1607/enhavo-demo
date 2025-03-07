@@ -3,7 +3,7 @@
   .flex {display: flex;gap: 51px;}
   .left {
     flex: 0 0 calc(33% - 25.5px);max-width: calc(33% - 25.5px);
-    .label {padding-inline: 10px;border: 1px solid black;}
+    .label {padding:0 10px 0 10px;border: 1px solid black;}
     .span {
       display: flex;
       padding: 5px 0;
@@ -13,7 +13,7 @@
       }
     }
     .overline {
-      color: $textColor3;font-size: 1.5rem;@include typoOverline;cursor: pointer;
+      color: $textColor3;@include typoOverline;cursor: pointer;
     }
     .icons-chevron-down {
       cursor: pointer;
@@ -38,7 +38,7 @@
     .types-container {
       display: none;
       opacity: 0;
-      .items{padding: 15px 0;cursor: pointer}
+      .items{margin-top: 15px;margin-bottom:10px;cursor: pointer;text-transform: uppercase;}
       &.visible{display: block;opacity: 1;}
     }
   }

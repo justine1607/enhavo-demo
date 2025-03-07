@@ -10,16 +10,21 @@
     .media-container {
       position: relative;
       flex: 0 0 65.52%;
-      &::before{
-        content: "";
-        background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-      }
+      //&::before{
+      //  content: "";
+      //  background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+      //  position: absolute;
+      //  top: 0;
+      //  left: 0;
+      //  width: 100%;
+      //  height: 100%;
+      //  z-index: 1;
+      //}
+    }
+    .media-container img {
+      -webkit-mask-image: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+      mask-image: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+
     }
     .text-container {
       position: absolute;width: 100%;left: auto;right: 0;
@@ -46,7 +51,9 @@
 @include screenMaxWidth(1024px){
   .block-card{
     &.card-gradient{
-      .media-container::before{rotate: 180deg;top: 1px;}
+      .media-container img{
+        mask-image: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+      }
       .text-container{position: unset;max-width: unset;margin-top: -65px;}
     }
     &.card-stacked{

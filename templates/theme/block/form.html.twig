@@ -5,13 +5,14 @@
                 <div class="theme-headline boldHeadline">{{ block.headline|html_sanitize }}</div>
                 <div class="theme-overline">{{ block.overline|html_sanitize }}</div>
                 <div class="text ">{{ block.text|html_sanitize }}</div>
+                <div class="text ">Alle Felder mit * sind Pflichtfelder.</div>
             </div>
-            <form class="form" data-controller="form" novalidate>
+            <form class="form" data-controller="form">
                 {% for item in block.form %}
                     {% set input_id = item.type|replace({' ': '-'})|lower %}
                     <label for="{{ input_id }}" class="label">{{ item.label|html_sanitize }}</label>
                     {% if item.type == 'select' %}
-                    <div class="custom-select" data-form-target="openValue">
+                    <div class="custom-select" data-form-target="openValue" >
                         <input type="hidden" name="{{ item.label }}" id="{{ input_id }}" {% if item.is_required %}required{% endif %}>
                         <div class="wrapper" data-action="click->form#openOptions">
                             <div class="option-display" data-form-target="optionDisplay">Auswählen</div>
@@ -28,9 +29,9 @@
                         </div>
                     </div>
                     {% elseif item.type == 'textarea' %}
-                        <textarea name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" required="{{ item.is_required ? 'required' }}"></textarea>
+                        <textarea name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" {% if item.is_required %}required{% endif %}></textarea>
                     {% else %}
-                    <input type="{{ item.type }}" name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" required="{{ item.is_required ? 'required' }}">
+                    <input type="{{ item.type }}" name="{{ item.label }}" id="{{ input_id }}" placeholder="{{ item.placeholder|html_sanitize }}" {% if item.is_required %}required{% endif %}">
                     {% endif %}
                     {% if item.is_required %}
                         <div class="required-message">Dieses Feld muss ausgefüllt sein.</div>
@@ -38,7 +39,7 @@
                 {% endfor %}
                 <div class="checkbox-group">
                     <div class="content-wrapper">
-                        <input type="checkbox" name="{{ block.label }}" id="checkbox-{{ block.label|replace({' ': '-'})|lower }}" required>
+                        <input type="checkbox" name="{{ block.label }}" id="checkbox-{{ block.label|replace({' ': '-'})|lower }}" {% if block.is_required %}required{% endif %}>
                         <label for="checkbox-{{ block.label|replace({' ': '-'})|lower }}" class="checkbox-label">
                             {{ block.label|html_sanitize }}
                         </label>
@@ -48,10 +49,9 @@
                     {% endif %}
                 </div>
                 <div class="btn-container">
-                    <a data-action="click->form#validateForm" class="theme-cta cta theme-button">{{ block.ctaTitle }}</a>
+                    <a data-action="click->form#validateForm" data-form-target="formBtn" class="theme-cta cta theme-button">{{ block.ctaTitle }}</a>
                 </div>
             </form>
-
         </div>
     </div>
 </div>

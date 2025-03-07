@@ -26,6 +26,7 @@
       }
       &.slick-active {
         background: black;
+        transform: none !important;
         button {
           &:before {color: unset}
           font{display: none;}
