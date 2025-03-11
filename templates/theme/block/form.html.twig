@@ -48,8 +48,8 @@
                         <div class="required-message">Dieses Feld muss ausgefüllt sein.</div>
                     {% endif %}
                 </div>
-                <div class="btn-container">
-                    <a data-action="click->form#validateForm" data-form-target="formBtn" class="theme-cta cta theme-button">{{ block.ctaTitle }}</a>
+                <div class="btn-container" data-action="click->form#validateForm" data-form-target="formBtn">
+                    <a class="theme-cta cta theme-button">{{ block.ctaTitle }}</a>
                 </div>
             </form>
         </div>
