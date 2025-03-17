@@ -37,7 +37,7 @@
     }
   }
 }
-@include screenMaxWidth(768px){
+@include screenMaxWidth(1024px){
   .block-content{
     &.content-flex{
       .flex{flex-wrap: wrap;}

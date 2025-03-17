@@ -5,11 +5,11 @@
       &.boldHeadline{font-size: 5rem;line-height: 1.28em;}
     }
   }
-  &.advance-text-big{
-    .copy{font-weight: 700;font-size: 2.4rem;line-height: 1.33em}
-  }
   &.advance-one-column{
     .flex{max-width: 732px;margin-inline: unset;}
+  }
+  &.advance-text-big{
+    .copy{font-weight: 700;font-size: 2.4rem;line-height: 1.33em}
   }
   &.advance-two-column{
     .flex{display: flex;flex-direction: column;max-width: unset;}

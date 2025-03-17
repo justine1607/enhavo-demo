@@ -19,7 +19,7 @@
     .grid{gap: 20px;}
   }
 }
-@include screenMaxWidth(768px){
+@include screenMaxWidth(1024px){
   .block-team{
     .grid{grid-row-gap: 50px;}
     .item{
@@ -31,7 +31,7 @@
       }
       &:nth-of-type(5){
         margin-top: 0;
-        grid-column: 3/span 2;
+        grid-column: 2/span 4;
       }
     }
   }

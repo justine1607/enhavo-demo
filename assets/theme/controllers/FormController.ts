@@ -24,9 +24,9 @@ export default class extends Controller {
         if (isValid) {
             this.element.reset();
             this.resetCustomSelects();
-            this.formBtnTarget.dataset.submitted = "false"; // Reset submission state
+            this.formBtnTarget.dataset.submitted = "false";
         } else {
-            this.formBtnTarget.dataset.submitted = "true"; // Mark as submitted
+            this.formBtnTarget.dataset.submitted = "true";
         }
 
         this.updateButtonOpacity();
@@ -137,7 +137,6 @@ export default class extends Controller {
         }
 
         this.openValueTarget.classList.remove("open-options");
-        // this.updateButtonOpacity();
     }
 
     openOptions() {
