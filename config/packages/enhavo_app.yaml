@@ -13,13 +13,13 @@ enhavo_app:
             type: page
         navigation:
             type: navigation
+        library:
+            type: media_library
         team_member:
-            type: base
+            type: link
             label: Team
             icon: people
             route: app_team_member_index
-        media_library:
-            type: media_library
 
 #        backup:
 #            type: backup

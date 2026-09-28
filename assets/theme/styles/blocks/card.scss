@@ -1,12 +1,11 @@
 .block-card {
-  .text-flex {
+  .text-media-flex {
     display: flex;align-items: center;
     gap: 50px;
     position: relative;
     .media-container {
-      flex: 0 0 calc(50% - 25px);
-      max-width: calc(50% - 25px);
-      position: relative;
+      flex: 0 0 994px;
+      width: 100%;
       .img-wrapper {
         padding-bottom: 56.2%;
         position: relative;
@@ -14,7 +13,9 @@
       img {display: block;@include imgCover;}
     }
     .text-container {
-      flex: 0 0 calc(50% - 25px);max-width: calc(50% - 25px);
+      margin-left: -200px;
+      position: relative;
+      z-index: 2;
       .headline {
         padding: 5px 0 15px 0;
       }
@@ -56,6 +57,17 @@
     .text-container{
       max-width: 733px;
       .headline{padding: 5px 0 15px 0}
+    }
+  }
+}
+@include screenMaxWidth(1440px){
+  .block-card{
+    .text-media-flex{
+      display: block;
+      .text-container{
+        margin-left: 0;
+        margin-top: 20px;
+      }
     }
   }
 }

@@ -1,15 +1,19 @@
 import { Controller } from "@hotwired/stimulus";
 import $ from 'jquery';
-import 'slick-carousel';
+import slickInit from 'slick-carousel';
+
+slickInit(window, $);
 
 export default class extends Controller {
     static targets = ["slide", "navButton"];
 
     connect() {
         $(this.slideTarget).slick({
-            slidesToShow: 2,
+            slidesToShow: 1,
             centerMode:true,
+            centerPadding: '260px',
             slidesToScroll: 1,
+            infinite: true,
             autoplay: true,
             arrows:false,
             dots: true,
@@ -21,6 +25,7 @@ export default class extends Controller {
                     settings: {
                         slidesToShow: 1,
                         centerMode:true,
+                        centerPadding: '20px',
                         slidesToScroll: 1,
                     }
                 },

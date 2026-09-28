@@ -4,7 +4,7 @@
             {% if block.items is defined %}
                 {% for block in block.items %}
                     <div class=" item_2">
-                        <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="gallery-img">
+                        <img src="{{ media_url(block.picture) }}" alt="{{ media_parameter(block.picture, 'alt') }}" class="gallery-img">
                     </div>
                 {% endfor %}
             {% endif %}
@@ -22,7 +22,7 @@
             </button>
             {% if block.media is defined %}
             <div class="image-container">
-                <img src="{{ media_url(block.media) }}" alt="{{ media_parameter(block.media, 'alt') }}" class="">
+                <img src="{{ media_url(block.picture) }}" alt="{{ media_parameter(block.picture, 'alt') }}" class="">
             </div>
             {% endif %}
         </div>

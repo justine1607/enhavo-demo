@@ -1,0 +1,29 @@
+imports:
+    - path: '@enhavo/app/services/admin/*'
+    - path: '@enhavo/dashboard/services/admin/*'
+    - path: '@enhavo/form/services/admin/*'
+    - path: '@enhavo/block/services/admin/*'
+    - path: '@enhavo/media/services/admin/*'
+    - path: '@enhavo/media-library/services/admin/*'
+    - path: '@enhavo/user/services/admin/*'
+services:
+    action/DownloadAndDelete:
+        from: './action/DownloadAndDelete'
+        import: DownloadAndDeleteAction
+        chunk: 'app'
+        arguments:
+            - '@enhavo/app/modal/ModalManager'
+            - '@enhavo/app/flash-message/FlashMessenger'
+        tags:
+            - { name: 'enhavo_app.action', class: 'DownloadAndDeleteAction' }
+
+    action/CancelDeletion:
+        from: './action/CancelDeletion'
+        import: CancelDeletionAction
+        chunk: 'app'
+        arguments:
+            - '@enhavo/app/manager/ResourceInputManager'
+            - '@enhavo/app/flash-message/FlashMessenger'
+            - '@enhavo/app/ui/UiManager'
+        tags:
+            - { name: 'enhavo_app.action', class: 'CancelDeletionAction' }

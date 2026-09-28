@@ -1,0 +1,59 @@
+//@use '../core/mixins' as mixins;
+//
+//a {
+//  text-decoration: none;
+//  color: inherit;
+//}
+//li {
+//  list-style: none;
+//}
+//
+//.style-blue {
+//  background: var(--color-blue);
+//  .theme-headline-big {
+//    color: var(--color-white);
+//  }
+//  .theme-headline {
+//    color: var(--color-white);
+//  }
+//  .theme-headline-small {
+//    color: var(--color-white);
+//  }
+//  .theme-overline {
+//    color: var(--color-white);
+//  }
+//  .theme-text {
+//    color: var(--color-white);
+//  }
+//  .theme-cta {
+//    color: var(--color-white);
+//  }
+//}
+//
+//.theme-headline-big {
+//  font: var(--font-headline-h1);
+//  color: var(--color-text-primary);
+//}
+//.theme-headline {
+//  font: var(--font-headline-h2);
+//  color: var(--color-text-primary);
+//}
+//.theme-headline-small {
+//  font: var(--font-headline-h3);
+//  color: var(--color-text-primary);
+//}
+//.theme-overline {
+//  font: var(--font-overline);
+//  color: var(--color-blue);
+//  text-transform: uppercase;
+//}
+//.theme-text {
+//  font: var(--font-text-regular);
+//  color: var(--color-text-primary);
+//}
+//
+//@include mixins.screenMaxWidth(767px) {
+//  .theme-headline-big {
+//    hyphens: auto;
+//  }
+//}

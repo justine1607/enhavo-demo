@@ -5,6 +5,7 @@ namespace App\Twig;
 
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
 class GeneralFunctions extends AbstractExtension {
 
@@ -13,8 +14,8 @@ class GeneralFunctions extends AbstractExtension {
     public function getFilters()
     {
         return array(
-            new \Twig_SimpleFilter('youtube_url', array($this, 'getYoutubeUrl')),
-            new \Twig_SimpleFilter('youtube_id', array($this, 'getYoutubeId'))
+            new TwigFilter('youtube_url', array($this, 'getYoutubeUrl')),
+            new TwigFilter('youtube_id', array($this, 'getYoutubeId'))
         );
     }
 

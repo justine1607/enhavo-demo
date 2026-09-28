@@ -25,7 +25,7 @@ class SwipeTeaserBlockItemType extends AbstractType
                 'label' => 'Picture',
                 'help' => 'Supported formats are jpeg, gif, png, webp',
                 'multiple' => false,
-                'upload' => false,
+                'upload' => true,
             ])
 
             ->add('overline', TextType::class, [

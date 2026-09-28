@@ -1,5 +1,5 @@
 .block-hero {
-  &.hero-flex {
+  &.media-text-flex {
     .flex {
       display: flex;gap: 55px;
       .media-container {
@@ -70,4 +70,7 @@
     }
   }
   .padding {padding: 10px 0 15px 0;}
+  .background-grey{
+    background: #171717;
+  }
 }

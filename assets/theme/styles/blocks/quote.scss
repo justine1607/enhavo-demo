@@ -1,6 +1,15 @@
 .block-quote {
   background: $textColor3;
-  height: 298px;display: flex;justify-content: center;align-items: center;
+  min-height: 298px;
+  .theme-container{
+    position: relative;
+    min-height: 298px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   .flex {
     display: flex;justify-content: center;align-items: center;
     .text-container {
@@ -12,9 +21,14 @@
         color: #FFF;text-transform: capitalize;text-align: center;}
     }
   }
-  .svg-right {
-    padding-top: 14px;
-    img{max-width: 86px;display: block;margin-left: auto;}
+  .svg-left{
+    position: absolute;
+    top: -20px;
+    left: 0;
   }
-  img{max-width: 86px;display: block;}
+  .svg-right {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+  }
 }

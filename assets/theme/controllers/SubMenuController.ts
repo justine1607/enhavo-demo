@@ -6,4 +6,8 @@ export default class extends Controller {
 
     connect() {
     }
+
+    button() {
+        this.element.classList.toggle('open');
+    }
 }
