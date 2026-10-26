@@ -1,3 +1,4 @@
+{% if nagScreen %}
 <div class="block-nag-screen">
     <div class="theme-container">
         <div class="wrapper">
@@ -6,17 +7,15 @@
             </div>
             <div class="flex">
                 <div class="text-container">
-                    <div class="overline theme-overline">{{ block.overline|html_sanitize }}</div>
-                    <div class="headline theme-headline boldHeadline">{{ block.headline|html_sanitize }}</div>
-                    <div class="copy">{{ block.copy|html_sanitize }}</div>
-                    <div class="button-container">
-                        <div class="btn-wrapper">
-                            <a class="theme-cta theme-button"  href="{{ block.ctaLink }}" target="{{ block.ctaTarget }}">{{ block.ctaTitle }}</a>
-                        </div>
-                    </div>
+                    <div class="overline theme-overline">{{ nagScreen.overline|html_sanitize }}</div>
+                    <div class="headline theme-headline boldHeadline">{{ nagScreen.title|html_sanitize }}</div>
+                    <div class="copy">{{ nagScreen.text|html_sanitize }}</div>
+                        <form class="nag-screen-form">
+                            <button class="theme-button" type="submit">{{ nagScreen.buttonTitle|default('Senden') }}</button>
+                        </form>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
+{% endif %}

@@ -4,26 +4,67 @@
     .media-container {
       aspect-ratio: 16 / 9;
       position: relative;
-      img {display: block;@include imgCover;}
+      // contain (not cover) keeps the whole image visible inside the fixed
+      // 16/9 box — avoids cropping/cutting the top and bottom of the image.
+      img {@include imgPosition;object-fit: contain;display: block;}
     }
     .texts-container {padding-top: 20px;
       overflow-wrap: break-word; hyphens: auto;
     }
   }
   .list-grid {display: flex;flex-direction: column; gap: 60px;
-    .list-img-wrapper {display: flex;gap: 50px;
+    .list-img-wrapper {display: flex;gap: 50px;align-items: flex-start;
       .media-container {
         flex: 0 0 calc(32.8% - 25px);
         max-width: calc(32.8% - 25px);
+        aspect-ratio: 16 / 9;
         position: relative;
-        img {display: block;@include imgCover;height: auto}
+        // contain (not cover) keeps the whole image visible inside the fixed
+        // 16/9 box — uniform height across screens, without cropping/cutting.
+        img {@include imgPosition;object-fit: contain;display: block;}
       }
-      .texts-container {flex: 0 0 65.65%;max-width: calc(65.65% - 25px);}
+      //.texts-container {flex: 0 0 65.65%;max-width: calc(65.65% - 25px);}
+    }
+  }
+  @include screenMaxWidth(1440px){
+    .cards-grid{
+      gap: 20px;
+    }
+    .list-grid{
+      .list-img-wrapper{
+        gap: 20px;
+      }
     }
   }
   @include screenMaxWidth(1024px){
     .cards-grid{
-      gap: 20px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .list-grid{
+      .list-img-wrapper{
+        .media-container{
+          flex: 0 0 calc(34.1% - 20px);
+          max-width: 34.1%
+        }
+      }
+    }
+  }
+  @include screenMaxWidth(767px){
+    .cards-grid{
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .list-grid{
+
+      .list-img-wrapper{
+        display: block;
+        .media-container{
+          max-width: 100%;
+          margin-bottom: 20px;
+          img{
+            position: relative;
+          }
+        }
+      }
     }
   }
 }

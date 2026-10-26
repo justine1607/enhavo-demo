@@ -1,4 +1,4 @@
-<div class="block-team space-top">
+<div class="block-team space-top" id="team">
     <div class="theme-container">
         <div class="grid">
             {% for block in block.items %}
@@ -7,7 +7,6 @@
                         <img src="{{ media_url(block.teamMember.picture) }}" alt="{{ media_parameter(block.teamMember.picture, 'alt') }}">
                     </div>
                     <div class="text-container">
-                        <div class="theme-overline overline">{{ block.position }}</div>
                         <span class="theme-headline headline">{{ block.teamMember.firstName }} {{ block.teamMember.lastName }}</span>
                         <div class="copy">
                             <div>{{ block.teamMember.phone }}</div>

@@ -1,5 +1,5 @@
 .block-quote {
-  background: $textColor3;
+  background: var(--color-dark);
   min-height: 298px;
   .theme-container{
     position: relative;
@@ -15,7 +15,7 @@
     .text-container {
       flex: 1; display: flex;flex-direction: column;justify-content: center;align-items: center;gap: 30px;
       .headline{
-        color: $textColor1;text-transform: inherit;font-style: italic;text-align: center;
+        color: var(--color-white);text-transform: inherit;font-style: italic;text-align: center;
         max-width: 76%}
       .caption {
         color: #FFF;text-transform: capitalize;text-align: center;}

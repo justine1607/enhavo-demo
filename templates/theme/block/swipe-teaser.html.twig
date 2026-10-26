@@ -1,25 +1,28 @@
 <div class="block-swipe-teaser" data-controller="swiper-teaser">
-{#    <div class="theme-container">#}
-        {% if block.headline %}
-            <div class="theme-headline {{ block.titleAlignment }}">{{ block.headline|html_sanitize }}</div>
-        {% endif %}
-        <div class="grid" data-swiper-teaser-target="slide">
-            {% for item in block.items %}
-                <div class="slide">
-                    <div class="slide-inner">
-                        <div class="media-wrapper">
-                            <img src="{{ media_url(item.picture) }}" alt="{{ media_parameter(item.picture,'alt') }}" class="media-gradient">
+    {% if block.headline %}
+        <div class="theme-headline {{ block.titleAlignment }}">{{ block.headline|html_sanitize }}</div>
+    {% endif %}
+    <div class="grid" data-swiper-teaser-target="slide">
+        {% for item in block.items %}
+            <div class="slide">
+                <div class="slide-inner">
+                    <div class="media-wrapper">
+                        <img src="{{ media_url(item.picture) }}" alt="{{ media_parameter(item.picture,'alt') }}" class="media-gradient">
+                    </div>
+                    <div class="text-wrapper">
+                        <div class="text-container">
+                            <div class="theme-overline">{{ item.overline|html_sanitize }}</div>
+                            <div class="theme-headline padding">{{ item.headline|html_sanitize }}</div>
+                            <div class="copy">{{ item.text|html_sanitize }}</div>
                         </div>
-                        <div class="text-wrapper">
-                            <div class="text-container">
-                                <div class="theme-overline">{{ item.overline|html_sanitize }}</div>
-                                <div class="theme-headline padding">{{ item.headline|html_sanitize }}</div>
-                                <div class="copy">{{ item.text|html_sanitize }}</div>
+                        <div class="theme-button-container">
+                            <div class="btn-wrapper">
+                                <a class="theme-cta theme-button" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
-{#    </div>#}
+            </div>
+        {% endfor %}
+    </div>
 </div>

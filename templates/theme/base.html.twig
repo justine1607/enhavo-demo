@@ -17,32 +17,26 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/theme/images/favicon/favicon-16x16.svg', 'vite') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/theme/images/favicon/favicon-32x32.svg', 'vite') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('build/theme/images/favicon/favicon-96x96.png', 'vite') }}">
-
+{##}
     <!-- Apple Touch Icon (iPhone & iPad Homescreen) -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/theme/images/favicon/apple-touch-icon.png', 'vite') }}">
-
+{##}
     <!-- Android/Chrome App Icon -->
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('build/theme/images/favicon/android-icon-192x192.png', 'vite') }}">
-
+{##}
     {{ vite_css_tags('entrypoints/main.js', 'theme') }}
 
     {% block structuredData %}{% endblock %}
 
 </head>
-<body>
-
-<header>
-    {% include 'theme/navigation/main.html.twig' %}
-</header>
+<body id="top">
 
 <main>
     {% block main %}{% endblock %}
 </main>
+
 {{ vite_js_tags('entrypoints/main.js', 'theme') }}
 
-<footer>
-    {% include 'theme/navigation/footer.html.twig' %}
-</footer>
 {% if routes is defined %}
     <script id="routes" type="application/json">{{ routes|json_encode|e }}</script>
 {% endif %}

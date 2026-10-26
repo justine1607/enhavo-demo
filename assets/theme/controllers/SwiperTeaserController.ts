@@ -10,8 +10,8 @@ export default class extends Controller {
     connect() {
         $(this.slideTarget).slick({
             slidesToShow: 1,
-            centerMode:true,
-            centerPadding: '260px',
+            centerMode: false,
+            variableWidth: true,
             slidesToScroll: 1,
             infinite: true,
             autoplay: true,
@@ -21,13 +21,19 @@ export default class extends Controller {
             pauseOnHover:true,
             responsive: [
                 {
-                    breakpoint: 780,
+                    breakpoint: 1025,
                     settings: {
                         slidesToShow: 1,
-                        centerMode:true,
-                        centerPadding: '20px',
-                        slidesToScroll: 1,
-                    }
+                        centerMode: true,
+                        slidesToScroll: 3,
+                    },
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        variableWidth: false,
+                    },
                 },
             ]
         });
