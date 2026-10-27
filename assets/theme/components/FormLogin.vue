@@ -1,6 +1,5 @@
 <template>
     <form-form :form="form">
-<!--    <form-form :form="form" @submit="onSubmit" novalidate>-->
         <div class="form-wrapper">
             <form-widget :form="form.get('userIdentifier')"></form-widget>
             <form-widget :form="form.get('password')"></form-widget>
@@ -41,16 +40,11 @@ function applyErrors(formData: any): void
 
         props.form.get(child.name).errors = child.errors ?? []
 
-        // Keep the refreshed CSRF token so a retry submits a valid one.
         if (child.name === 'csrfToken' && typeof child.value === 'string') {
             props.form.get('csrfToken').value = child.value
         }
     }
 }
-// Empty fields must not reach the server: an empty identifier resolves to no
-// user and Symfony throws UserNotFoundException — the same exception a genuinely
-// unknown e-mail throws — which would surface the misleading "not registered"
-// message. Catch it here and show a proper "required" hint on the field instead.
 function validateRequired(): boolean
 {
     let valid = true
