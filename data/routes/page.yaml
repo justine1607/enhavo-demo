@@ -35,7 +35,7 @@ page:
                         resource:
                             content:
                                 children:
-                                    - "expr:load('block/content-flex-cards.json')"
+                                    - "expr:load('block/content-flex-card.json')"
                                     - "expr:load('block/content-flex-list.json')"
                 block=team:
                     recursive: true

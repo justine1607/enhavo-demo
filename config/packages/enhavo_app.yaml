@@ -11,11 +11,6 @@ enhavo_app:
             type: user
         page:
             type: page
-        article:
-            type: link
-            label: Articles
-            icon: book
-            route: app_article_index
         navigation:
             type: navigation
         library:

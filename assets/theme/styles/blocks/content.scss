@@ -1,15 +1,36 @@
 .block-content {
+  .headline{
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  .theme-headline {
+    &.align-center { text-align: center; }
+    &.align-left { text-align: left; }
+  }
+  .theme-button-container{
+    .btn-wrapper{
+      text-align: center;
+      width: 100%;
+      display: block;
+      padding: 15px 30px ;
+    }
+  }
+  .texts-container {
+    &.text-align-center { text-align: center; }
+    &.text-align-left { text-align: left; }
+  }
   .cards-grid {
     display: grid;grid-template-columns: repeat(3, minmax(0, 1fr));gap: 50px;
+    .cards-img-wrapper {display: flex;flex-direction: column;height: 100%;}
     .media-container {
       aspect-ratio: 16 / 9;
       position: relative;
-      // contain (not cover) keeps the whole image visible inside the fixed
-      // 16/9 box — avoids cropping/cutting the top and bottom of the image.
       img {@include imgPosition;object-fit: contain;display: block;}
     }
     .texts-container {padding-top: 20px;
       overflow-wrap: break-word; hyphens: auto;
+      display: flex;flex-direction: column;flex: 1;
+      .theme-button-container {margin-top: auto;}
     }
   }
   .list-grid {display: flex;flex-direction: column; gap: 60px;
@@ -19,11 +40,9 @@
         max-width: calc(32.8% - 25px);
         aspect-ratio: 16 / 9;
         position: relative;
-        // contain (not cover) keeps the whole image visible inside the fixed
-        // 16/9 box — uniform height across screens, without cropping/cutting.
+
         img {@include imgPosition;object-fit: contain;display: block;}
       }
-      //.texts-container {flex: 0 0 65.65%;max-width: calc(65.65% - 25px);}
     }
   }
   @include screenMaxWidth(1440px){

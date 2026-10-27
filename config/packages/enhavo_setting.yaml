@@ -1,5 +1,15 @@
 enhavo_setting:
     settings:
+        # --- Header (theme/component/header.html.twig) ---
+        header_logo:
+            label: "Header wordmark logo"
+            type: media
+            default: 'fixtures/images/header/logo-wordmark.svg'
+        header_paw:
+            label: "Header paw logo"
+            type: media
+            default: 'fixtures/images/header/logo-paw.svg'
+
         # --- Footer (theme/navigation/footer.html.twig) ---
         footer_description:
             label: "Footer description"
@@ -40,7 +50,7 @@ enhavo_setting:
         contact_phone:
             label: "Contact widget phone"
             type: string
-            default: "+49 0512 02102"
+            default: "+49 (0) 89 1234 5678 90"
         contact_email:
             label: "Contact widget email"
             type: string

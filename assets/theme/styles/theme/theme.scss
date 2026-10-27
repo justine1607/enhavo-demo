@@ -2,9 +2,7 @@ main{margin-top: 50px}
 @include screenMaxWidth(768px){
   main{margin-top: 150px}
 }
-// smooth scrolling for in-page anchor nav (e.g. clicking "Team" -> #team block)
 html{scroll-behavior: smooth;}
-// keep an anchored block clear of the fixed header (max-height 132px) when jumped to
 main [id]{scroll-margin-top: 132px;}
 @include screenMaxWidth(768px){
   main [id]{scroll-margin-top: 90px;}

@@ -47,10 +47,11 @@
 .theme-button-container{
   padding-top: 30px;
   .btn-wrapper{
-    display:inline-flex;border-radius: 40px;border: 2px solid #000;
+    display: inline-flex;
+    border-radius: 40px;border: 2px solid #000;
   }
   .theme-button{
-    cursor: pointer;padding:15px 30px;text-decoration: none;
+    cursor: pointer;text-decoration: none;
   }
   a{
     @extend .theme-label;

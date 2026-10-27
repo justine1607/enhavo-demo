@@ -31,6 +31,11 @@
 </head>
 <body id="top">
 
+{% block header %}
+    {% include 'theme/component/header.html.twig' %}
+
+{% endblock %}
+
 <main>
     {% block main %}{% endblock %}
 </main>
@@ -40,6 +45,9 @@
 {% if routes is defined %}
     <script id="routes" type="application/json">{{ routes|json_encode|e }}</script>
 {% endif %}
+{% block footer %}
+    {% include 'theme/component/footer.html.twig' %}
+{% endblock %}
 
 </body>
 </html>

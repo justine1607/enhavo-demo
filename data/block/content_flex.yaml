@@ -6,7 +6,7 @@
     "children": [],
     "data": {
         "block": {
-            "layout": "cards",
+            "layout": "card",
             "alignment": "center",
             "headline": "Test",
             "items": [
