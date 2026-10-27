@@ -8,6 +8,7 @@ COPY .env .env
 COPY assets assets
 COPY bin bin
 COPY config config
+COPY data data
 COPY fixtures fixtures
 COPY migrations migrations
 COPY public public
@@ -27,6 +28,6 @@ RUN apt-get install -y wait-for-it && \
     chmod 744 /etc/my_init.d/03_env.bash && \
 	chmod 744 /etc/my_init.d/04_init.bash && \
     composer install && \
-	yarn install && \
+	yarn install --ignore-engines && \
 	yarn build && \
  	chown www-data:www-data -R var
