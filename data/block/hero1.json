@@ -12,26 +12,22 @@
       "layout": "text-media",
       "color": "black",
       "layer1": {
-        "id": 4,
-        "mimeType": "image/png",
-        "extension": "png",
-        "filename": "Bildschirmfoto 2024-05-22 um 14.03.11.png",
+        "token": "",
+        "shortChecksum": "2",
+        "basename": "2.png",
         "parameters": {
           "alt": null,
           "title": null
-        },
-        "md5Checksum": "d17ca2195f7b5ef0061cd019ca79e239"
+        }
       },
       "layer2": {
-        "id": 4,
-        "mimeType": "image/png",
-        "extension": "png",
-        "filename": "Bildschirmfoto 2024-05-22 um 14.03.11.png",
+        "token": "",
+        "shortChecksum": "3",
+        "basename": "3.png",
         "parameters": {
           "alt": null,
           "title": null
-        },
-        "md5Checksum": "d17ca2195f7b5ef0061cd019ca79e239"
+        }
       },
       "overline": "Test",
       "headline": "Test",

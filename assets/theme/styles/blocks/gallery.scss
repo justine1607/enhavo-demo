@@ -103,17 +103,6 @@
       }
     }
   }
-  //@include screenMaxWidth(1279px){
-  //  &.layout-columns{
-  //    .grid{
-  //      grid-template-columns: repeat(6, 1fr);
-  //      .item{grid-column: 2/span 4;}
-  //      .image-container{grid-column: 2/span 4;}
-  //      .prev-button{grid-column: 1/ span 1;}
-  //      .next-button{grid-column: 6/ span 1;}
-  //    }
-  //  }
-  //}
   @include screenMaxWidth(767px){
     &.layout-rows{
       .grid{

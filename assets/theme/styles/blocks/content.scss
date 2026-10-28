@@ -19,9 +19,9 @@
     &.text-align-center { text-align: center; }
     &.text-align-left { text-align: left; }
   }
-  .cards-grid {
+  .card-grid {
     display: grid;grid-template-columns: repeat(3, minmax(0, 1fr));gap: 50px;
-    .cards-img-wrapper {display: flex;flex-direction: column;height: 100%;}
+    .card-img-wrapper {display: flex;flex-direction: column;height: 100%;}
     .media-container {
       aspect-ratio: 16 / 9;
       position: relative;
@@ -46,7 +46,7 @@
     }
   }
   @include screenMaxWidth(1440px){
-    .cards-grid{
+    .card-grid{
       gap: 20px;
     }
     .list-grid{
@@ -56,7 +56,7 @@
     }
   }
   @include screenMaxWidth(1024px){
-    .cards-grid{
+    .card-grid{
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .list-grid{
@@ -69,7 +69,7 @@
     }
   }
   @include screenMaxWidth(767px){
-    .cards-grid{
+    .card-grid{
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     .list-grid{

@@ -1,4 +1,7 @@
 .block-hero {
+  .flex{
+    height: 565px;
+  }
   &.text-media-flex {
     .flex {
       display: flex;gap: 55px;
@@ -23,7 +26,6 @@
   &.media-text-flex {
     background-color: #171717;
     position: relative;
-    height: 565px;
     .flex {
       display: flex;
       flex-direction: column;

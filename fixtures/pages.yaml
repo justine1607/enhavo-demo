@@ -28,9 +28,9 @@
       mobile: '30'
 
     - type: content_flex
-      layout: 'cards'
+      layout: 'card'
       alignment: 'center'
-      headline: 'Warum ein Gassigeher?'
+      headline: 'Warum justine ein Gassigeher?'
       items:
         - media: 'content-flex/kartondog1.png'
           headline: 'Zeitersparnis und Glück für Ihren Hund:'
@@ -94,7 +94,7 @@
       mobile: '30'
 
     - type: content_flex
-      layout: 'cards'
+      layout: 'card'
       alignment: 'left'
       items:
         - media: 'content-flex/dog1.jpg'

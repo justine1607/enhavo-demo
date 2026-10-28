@@ -8,6 +8,7 @@
     <form-form v-else :form="form" @submit="onSubmit" novalidate class="contact-form">
         <div class="contact-form">
             <div class="form-row" :class="{ 'has-error': hasError('title') }">
+                <label v-if="titleField.label">{{ titleField.label }}</label>
                 <div ref="titleRef" class="contact-select"
                      :class="{ 'is-open': titleOpen, 'is-selected': !!titleField.value }">
                     <div class="contact-select__trigger" @click="titleOpen = !titleOpen">
