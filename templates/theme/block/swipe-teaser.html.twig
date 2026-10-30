@@ -17,7 +17,11 @@
                         </div>
                         <div class="theme-button-container">
                             <div class="btn-wrapper">
-                                <a class="theme-cta theme-button" href="{{ item.ctaLink }}" target="{{ item.ctaTarget }}">{{ item.ctaTitle }}</a>
+                                {# The entity stores the CTA as label/link/target; the template-preview
+                                   env passes ctaTitle/ctaLink/ctaTarget. Fall back between the two. #}
+                                <a class="theme-cta theme-button"
+                                   href="{{ item.link is defined and item.link ? item.link : (item.ctaLink is defined ? item.ctaLink : '#') }}"
+                                   target="{{ item.target is defined and item.target ? item.target : (item.ctaTarget is defined ? item.ctaTarget : '_self') }}">{{ item.label is defined and item.label ? item.label : (item.ctaTitle is defined ? item.ctaTitle : '') }}</a>
                             </div>
                         </div>
                     </div>

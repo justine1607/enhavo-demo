@@ -1,4 +1,9 @@
-{% if nagScreen %}
+{# Content comes from the active NagScreen resource (dev/prod, via
+   NagScreenBlockType::createViewData); the template-preview env passes it
+   under `block` instead. Fall back between the two and only render when there
+   is actual content. #}
+{% set nag = nagScreen|default(null) ?: block|default(null) %}
+{% if nag and (nag.title is defined and nag.title) %}
 <div class="block-nag-screen">
     <div class="theme-container">
         <div class="wrapper">
@@ -7,12 +12,10 @@
             </div>
             <div class="flex">
                 <div class="text-container">
-                    <div class="overline theme-overline">{{ nagScreen.overline|html_sanitize }}</div>
-                    <div class="headline theme-headline boldHeadline">{{ nagScreen.title|html_sanitize }}</div>
-                    <div class="copy">{{ nagScreen.text|html_sanitize }}</div>
-                        <form class="nag-screen-form">
-                            <button class="theme-button" type="submit">{{ nagScreen.buttonTitle|default('Senden') }}</button>
-                        </form>
+                    <div class="overline theme-overline">{{ nag.overline is defined ? nag.overline|html_sanitize : '' }}</div>
+                    <div class="headline theme-headline boldHeadline">{{ nag.title is defined ? nag.title|html_sanitize : '' }}</div>
+                    <div class="copy">{{ nag.text is defined ? nag.text|html_sanitize : '' }}</div>
+                        <button class="theme-button" type="submit">{{ nag.buttonTitle is defined and nag.buttonTitle ? nag.buttonTitle : 'Senden' }}</button>
                 </div>
             </div>
         </div>

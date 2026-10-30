@@ -1,7 +1,4 @@
 .block-hero {
-  .flex{
-    height: 565px;
-  }
   &.text-media-flex {
     .flex {
       display: flex;gap: 55px;
@@ -9,12 +6,10 @@
         flex: 0 0 48.18%;max-width: 48.18%;
         .img-wrapper {
           position: relative;
-          padding-bottom: 56.28%;
-          flex: 1;
+          height: 100%;
         }
         img {
-          display: block;
-          @include imgCover;
+          display: block;width: 100%;
         }
       }
       .text-container {
@@ -24,9 +19,21 @@
     }
   }
   &.media-text-flex {
-    background-color: #171717;
     position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 565px;
+      background-color: #171717;
+      z-index: 0;
+    }
     .flex {
+      position: relative;
+      z-index: 1;
+      height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -88,17 +95,6 @@
     }
   }
   @include screenMaxWidth(1023px){
-    &.text-media-flex{
-      .flex{
-        display: block;
-        .media-container{
-          max-width: 100%;
-        }
-        .text-container{
-          margin-top: 20px;
-        }
-      }
-    }
     &.media-text-flex{
       .flex{
         .media-container{
@@ -116,6 +112,21 @@
     }
   }
   @include screenMaxWidth(767px){
-    &.media-text-flex{height: 100%;}
+    &.text-media-flex{
+      .flex{
+        display: block;
+        .media-container{
+          max-width: 100%;
+        }
+        .text-container{
+          margin-top: 20px;
+        }
+      }
+    }
+    &.media-text-flex{
+      &::before{
+        height: 100%;
+      }
+    }
   }
 }

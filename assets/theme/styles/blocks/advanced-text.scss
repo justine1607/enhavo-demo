@@ -68,16 +68,19 @@
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
-      line-height: 26px; /* 144.444% */
+      line-height: 26px;
       letter-spacing: 0.18px;
     }
+  }
+  .text-container{
+    padding-top: 20px;
   }
   .text-big {
     .theme-headline{
       font-size: 50px;
       font-style: normal;
       font-weight: 700;
-      line-height: 58px; /* 116% */
+      line-height: 58px;
       text-transform: uppercase;
     }
   }

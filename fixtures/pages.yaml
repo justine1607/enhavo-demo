@@ -30,7 +30,7 @@
     - type: content_flex
       layout: 'card'
       alignment: 'center'
-      headline: 'Warum justine ein Gassigeher?'
+      headline: 'Warum ein Gassigeher?'
       items:
         - media: 'content-flex/kartondog1.png'
           headline: 'Zeitersparnis und Glück für Ihren Hund:'
@@ -140,5 +140,10 @@
           lastName: 'block'
           phone: '+49 (0) 89 1234 5678 90'
           email: 'hello@vonhundeundmenschen.com'
+
+    - type: spacer
+      desktop: '100'
+      tablet: '50'
+      mobile: '30'
 
 

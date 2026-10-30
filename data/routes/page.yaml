@@ -123,4 +123,4 @@ page:
                         resource:
                             content:
                                 children:
-                                    - "expr:load('block/logo.json')"
+                                    - "expr:load('block/logo-wall.json')"
